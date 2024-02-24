@@ -13,6 +13,11 @@ if [ -z "$DB_EXISTS" ]; then
   docker-compose exec -T mysql mysql -uroot -proot -e "CREATE DATABASE cafedebug-mysql-local;"
 fi
 
+# Run the SQL script to create the tables
+echo "Creating tables..."
+docker-compose exec -T mysql mysql -uroot -proot cafedebug-mysql-local < ./init/cafedebug-mysql-create-table.sql
+
+
 # Run the SQL script to populate the database
 echo "Initializing database with data..."
-docker-compose exec -T mysql mysql -uroot -proot cafedebug-mysql < ./init/cafedebug-mysql.sql
+docker-compose exec -T mysql mysql -uroot -proot cafedebug-mysql < ./init/cafedebug-mysql-insert.sql
