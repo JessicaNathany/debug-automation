@@ -1,12 +1,17 @@
 # debug-automation
 
-
-# Setup database
-To database configure in local environment, following this steps? 
-- Before running the project, ensure that the database setup script is executable. Run the following command:
+# Setup
+To database configure in local environment, following this steps. 
+- Before running the project, configure access permission for this script
 
 ```bash
-chmod +x scripts/setup-database.sh
+ chmod +x setup.sh
 
 ```
-- Execute the script to configure database ./scripts/setup-database.sh
+- Execute the script to configure database ./scripts/setup.sh
+
+```bash
+ ./setup.sh
+
+```
+
