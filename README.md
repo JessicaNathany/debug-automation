@@ -1,6 +1,6 @@
 # debug-automation
 
-# Setup
+## Setup
 To database configure in local environment, following this steps. 
 - Before running the project, configure access permission for this script
 
