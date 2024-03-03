@@ -4,9 +4,11 @@
 echo "Starting all services..."
 docker-compose up -d
 echo
+echo
 
 echo "Waiting for containers to initialize..."
 sleep 10
+echo
 echo
 
 # Verify if the database exist 
