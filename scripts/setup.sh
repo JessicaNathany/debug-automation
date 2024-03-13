@@ -7,9 +7,11 @@ PROJECT_ROOT_DIR="$(dirname "$0")/.."
 echo "Starting all services..."
 docker-compose -f "$PROJECT_ROOT_DIR/docker-compose.yml" up -d
 echo
+echo
 
 echo "Waiting for containers to initialize..."
 sleep 2
+echo
 echo
 
 # Verify if the database exist 
