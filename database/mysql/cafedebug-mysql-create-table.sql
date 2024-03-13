@@ -19,7 +19,7 @@ Create table Category
 (
     Id int auto_increment primary key,
     Code char(36) not null,
-    Name varchar(50) not null,
+    Name varchar(50) not null
 );  
 
 --------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ Create table Contact
 (
     Id int auto_increment primary key,
     Code char(36) not null,
-    Name varchar(50) not null,
+    Name varchar(50) not null
 );  
 
 --------------------------------------------------------------------------------
@@ -50,7 +50,7 @@ Create table Episode
     Number int,
     CategoryId int
     View int,
-    Like int,
+    Like int
     FOREIGN KEY (CategoryId) REFERENCES CAtegory(Id) 
 ); 
 
