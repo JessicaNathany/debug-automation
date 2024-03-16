@@ -28,23 +28,22 @@ Create table Contact
 );  
 
 
-Create table Episode 
-(
-    Id int auto_increment primary key,
-    Code char(36) not null,
-    Title varchar(250) null,
-    Description mediumtext not null,
-    ResumeDescription mediumtext not null,
-    Url varchar(250) not null,
-    ImageUrl longtext not null,
-    PublicationDate datetime not null,
-    UpdateDate datetime null,
-    Active bit,
-    Number int,
-    CategoryId int,
-    View int,
-    Like int,
-    FOREIGN KEY (CategoryId) REFERENCES Category(Id) 
+CREATE TABLE Episode (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Code CHAR(36) NOT NULL,
+    Title VARCHAR(250),
+    Description MEDIUMTEXT NOT NULL,
+    ResumeDescription MEDIUMTEXT NOT NULL,
+    Url VARCHAR(250) NOT NULL,
+    ImageUrl LONGTEXT NOT NULL,
+    PublicationDate DATETIME NOT NULL,
+    UpdateDate DATETIME,
+    Active BIT,
+    Number INT,
+    CategoryId INT,
+    `View` INT,
+    `Like` INT, -- Use crases aqui se 'Like' for o nome da coluna
+    FOREIGN KEY (CategoryId) REFERENCES Category(Id)
 ); 
 
 Create table Team
@@ -72,8 +71,10 @@ Create table News
 (
     Id int auto_increment primary key,
     Code char(36) not null,
+    Title varchar(500) null,
     Description varchar(200) not null,
     UrlImage varchar(500) not null,
+    NewsLink varchar(500) null,
     PublicationDate  datetime not null,
     UpdateDate datetime null
 ); 

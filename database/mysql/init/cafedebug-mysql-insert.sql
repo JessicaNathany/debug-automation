@@ -1,5 +1,4 @@
--- Insert Banners
-INSERT INTO cafedebug-mysql-local.Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
     VALUES(
     'AC29FC0A-7E38-4CC7-B6E8-9C8151E678B5', 
     'Banner perfil', 
@@ -8,7 +7,7 @@ INSERT INTO cafedebug-mysql-local.Banner (Code, Name, UrlImage, Url, StartDate, 
     '2020-12-16 00:00:00', 
     '2024-12-31 00:00:00', 1);
 
-INSERT INTO cafedebug-mysql-local.Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
     VALUES(
     '3BE87F82-0F24-4003-849D-1EF890F1881C', 
     'Discord do Café Debug', 
@@ -17,7 +16,7 @@ INSERT INTO cafedebug-mysql-local.Banner (Code, Name, UrlImage, Url, StartDate, 
     '2021-08-28 00:00:00', 
     '2024-12-31 00:00:00', 1);
 
-INSERT INTO cafedebug-mysql-local.Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
     VALUES(
     '2A8F9254-5267-4C6E-A422-412BF1A2AFC4', 
     'Banner youtube Café Debug', 
@@ -26,7 +25,7 @@ INSERT INTO cafedebug-mysql-local.Banner (Code, Name, UrlImage, Url, StartDate, 
     '2020-12-16 00:00:00', 
     '2024-12-31 00:00:00', 1);
 
-INSERT INTO cafedebug-mysql-local.Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
     VALUES(
     '5885c581-e4f7-4100-8c2b-1cb6ec1925c5', 
     'Mentoria Tech', 
@@ -35,47 +34,40 @@ INSERT INTO cafedebug-mysql-local.Banner (Code, Name, UrlImage, Url, StartDate, 
     '2020-12-16 00:00:00', 
     '2024-12-31 00:00:00', 1);
 
-INSERT INTO cafedebug-mysql-local.Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
-    VALUES(
-    'a3d069ad-46d2-4963-9a06-64e0da3a1591', 
-    'Banner AGO Filmes', 
-    'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/2e760a0b-14fe-4429-8cf4-f46b99f966c6ago-filmes-banner.jpg', 
-    'https://thiagocarvalhofotografia.wordpress.com', 
-    '2022-06-09 09:00:00', 
-    '2024-12-31 00:00:00', 1);
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
+VALUES(
+'a3d069ad-46d2-4963-9a06-64e0da3a1591', 
+'Banner AGO Filmes', 
+'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/2e760a0b-14fe-4429-8cf4-f46b99f966c6ago-filmes-banner.jpg', 
+'https://thiagocarvalhofotografia.wordpress.com', 
+'2022-06-09 09:00:00', 
+'2024-12-31 00:00:00', 1);
 
-----------------------------------------------------------------------------
-
--- Insert Categories
-INSERT INTO cafedebug-mysql-local.Category (Code, Name) 
+INSERT INTO Category (Code, Name) 
 VALUES('2B6674BC-3C4C-4487-9240-3EAD9A5B9F0C', 'Linguagens de programação');
 
-INSERT INTO cafedebug-mysql-local.Category (Code, Name) 
+INSERT INTO Category (Code, Name) 
 VALUES('A546908A-4A1C-4F14-AF06-2642EB82CBB8', 'DevOps');
 
-INSERT INTO cafedebug-mysql-local.Category (Code, Name) 
+INSERT INTO Category (Code, Name) 
 VALUES('A3955A22-309E-4062-A463-700DF3704FEA', 'Entrevistas');
 
-INSERT INTO cafedebug-mysql-local.Category (Code, Name) 
+INSERT INTO Category (Code, Name) 
 VALUES('32DFF33C-A061-4788-8750-C329869846EF', 'Arquitetura de Software');
 
-INSERT INTO cafedebug-mysql-local.Category (Code, Name) 
+INSERT INTO Category (Code, Name) 
 VALUES('A2B45AD6-256B-45A5-AACF-5EBD1C45DBCB', 'Cybersecurity');
 
-----------------------------------------------------------------------------
--- Insert Contact
-INSERT INTO cafedebug-mysql-local.Contact (Code, Name) 
+INSERT INTO Contact (Code, Name) 
 VALUES('51bd02c5-44b4-4223-beff-e24d62e83202', 'marlibatista_costa6@bol.com.br');
 
-INSERT INTO cafedebug-mysql-local.Contact (Code, Name) 
+INSERT INTO Contact (Code, Name) 
 VALUES('3eb77547-2006-47c8-9d25-a1bc3839023c', 'laurareis44@live.com');
 
-INSERT INTO cafedebug-mysql-local.Contact (Code, Name) 
+INSERT INTO Contact (Code, Name) 
 VALUES('7a52c271-db86-4fd3-84fb-ec26c329422a', 'benjaminbraga_batista5@yahoo.com');
 
-----------------------------------------------------------------------------
--- Insert Episode
-INSERT INTO cafedebug-mysql-local.Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
 VALUES(
     'c3f3a4d1-077d-4cb7-8d4f-41929e5940a4', 
     '#1 React', 
@@ -85,7 +77,7 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/ffa32ebd-26a6-415a-bc19-a9ed9c2d4eefreact.jpg', 
     '2024-02-12 01:00:00', 1, 1, 1, 5, 10);
 
-INSERT INTO cafedebug-mysql-local.Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
 VALUES(
     '6a828c04-d0b8-46aa-869d-00d28d259ac3', 
     '#2 DevOps', 
@@ -95,7 +87,7 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/90224279-f629-4e03-a80e-9c1731fefe1fcultura-devops.jpg', 
     '2024-02-12 01:00:00', 1, 2, 2, 5, 10);
 
-INSERT INTO cafedebug-mysql-local.Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
 VALUES(
     '14f3b0ce-007e-419b-a74c-6c853c37c918', 
     '#3 DevRel,  Criação de Conteúdo e Carreira Tech com Gabs Ferreira', 
@@ -105,7 +97,7 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/entrevsita-gabs.jpg', 
     '2024-02-12 01:00:00', 1, 3, 3, 10, 10);
 
-INSERT INTO cafedebug-mysql-local.Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
 VALUES(
     '9d513e5c-651d-4a90-ba1e-388714d8b619', 
     '#4 Arquitetura Limpa: Construindo Aplicações do Jeito Certo', 
@@ -115,7 +107,7 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/arquitetura-padroes-projeto.jpg', 
     '2024-02-12 01:00:00', 1, 4, 4, 10, 10);
 
-INSERT INTO cafedebug-mysql-local.Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
 VALUES(
     'a8a50ace-c5d3-4999-8bc4-506e7fb01580', 
     '#5 Desenvolvimento Seguro', 
@@ -125,10 +117,7 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/desenvolvimento-seguro.jpg', 
     '2024-02-12 01:00:00', 1, 5, 5, 10, 10);
 
-----------------------------------------------------------------------------
--- Insert Team
-
-INSERT INTO cafedebug-mysql-local.Team (Code, Name, UrlGitHub, UrlInstagram, UrlLinkedin, UrlImage, Job)
+INSERT INTO Team (Code, Name, UrlGitHub, UrlInstagram, UrlLinkedin, UrlImage, Job)
 VALUES(
     '401ad9f0-66ed-4d83-8f68-5d2e9aa93cce', 
     'Jéssica Nathany',
@@ -138,7 +127,7 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/eb3747ef-168f-408d-9156-06b36b79f3b5jessica.jpg', 
     'Sofware Developer Backend, Host e fundadora do Café Debug');
 
-INSERT INTO cafedebug-mysql-local.Team (Code, Name, UrlGitHub, UrlInstagram, UrlLinkedin, UrlImage, Job)
+INSERT INTO Team (Code, Name, UrlGitHub, UrlInstagram, UrlLinkedin, UrlImage, Job)
 VALUES(
     '0cb23108-4a7d-4bf9-9503-863cc8cd400b', 
     'Weslley Fratini',
@@ -148,23 +137,16 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/98c7af12-0c87-47b5-ba7f-99d6d4de1fd6weslley.jpg', 
     'Sofware Developer Backend, Host e fundadora do Café Debug');
 
+INSERT INTO UserAdmin (Code, Name, Email, HashedPassword) 
+VALUES('c13655a9-68bb-47b2-b29d-3392f2b1a0b0', 'cafedebug', 'debugcafe@gmail.com', 'CC04C82A012DFB76D224B58D37314C0A');
+-- MD5 Hash password cafedebug123
 
-----------------------------------------------------------------------------
--- Insert UserAdmin
-INSERT INTO cafedebug-mysql-local.UserAdmin (Code, Name, Email, HashedPassword) 
-VALUES('c13655a9-68bb-47b2-b29d-3392f2b1a0b0', 'cafedebug', 'debugcafe@gmail.com', 'CC04C82A012DFB76D224B58D37314C0A',);
--- MD5 Hash
--- password cafedebug123
-
-----------------------------------------------------------------------------
--- Insert News
-INSERT INTO cafedebug-mysql-local.News (Code, Title, Description, UrlImage, NewsLink, PublicationDate, UpdateDate) 
+INSERT INTO News (Code, Title, Description, UrlImage, NewsLink, PublicationDate, UpdateDate) 
 VALUES(
     'f3ab9efa-12e3-4a37-a701-8f52a2096d36', 
     'E aí! Você já tentou construir uma CLI em Go?', 
-    ' Então, não perca a oportunidade de participar do Spaces "Desbravando o mundo das CLIs com Go" para mergulhar nesse universo fascinante, com a orientação da nossa prima @laislima_dev. ', 
+    'Então, não perca a oportunidade de participar do Spaces "Desbravando o mundo das CLIs com Go" para mergulhar nesse universo fascinante, com a orientação da nossa prima @laislima_dev. ', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/90224279-f629-4e03-a80e-9c1731fefe1fcultura-devops.jpg', 
     'https://twitter.com/He4rtDevs/status/1760688994067857839', 
     '2024-02-12 01:00:00', 
     '2024-02-12 01:00:00');
-
