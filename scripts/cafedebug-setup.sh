@@ -3,6 +3,30 @@
 # Define the root directory of the project (one level up from the script directory)
 PROJECT_ROOT_DIR="$(dirname "$0")/.."
 
+# Default MySQL version
+MySQL_VERSION="5.7"
+
+# Check for MacOS and offer MySQL version choice
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    echo "You are using Mac."
+    read -p "Would you like to use MySQL 8.0? (Y/N) " -n 1 -r
+    echo   
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        MySQL_VERSION="8.0"
+    fi
+fi
+
+echo "Using MySQL version $MySQL_VERSION"
+
+# Use sed to replace the MySQL version in docker-compose.yml
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # MacOS requires an empty extension with -i
+    sed -i '' "s/mysql:5.7/mysql:$MySQL_VERSION/" "$PROJECT_ROOT_DIR/docker-compose.yml"
+else
+    # Linux
+    sed -i "s/mysql:5.7/mysql:$MySQL_VERSION/" "$PROJECT_ROOT_DIR/docker-compose.yml"
+fi
+
 # Start all services
 echo "Starting all services..."
 docker-compose -f "$PROJECT_ROOT_DIR/docker-compose.yml" down
@@ -21,7 +45,8 @@ DB_EXISTS=$(docker-compose exec -T mysql mysql -uroot -proot -e "SHOW DATABASES 
 if [ -z "$DB_EXISTS" ]; then
   echo "Database does not exist. Creating database..."
   echo
-  docker-compose exec -T mysql mysql -h mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS cafedebug-mysql-local;"
+  echo
+  docker-compose exec -T mysql mysql -h mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS cafedebug-mysql-local CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 
 else
   echo "Database already exists. Skipping creation..."
@@ -48,10 +73,6 @@ docker cp "$SQL_INSERT_PATH" cafedebugdb:/cafedebug-mysql-insert.sql
 
 # Execute insert script in MySQL
 docker-compose exec -T mysql mysql -uroot -proot cafedebug-mysql-local -e "source /cafedebug-mysql-insert.sql"
-
-
-
-
 
 
 # Check if the cafedebug-backend.api container is running and Starting services

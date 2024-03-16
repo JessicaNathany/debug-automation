@@ -29,7 +29,7 @@ To database configure in local environment, following this steps. Notes for each
 ## Tests and Run 🧪
 For test you connection database in DBaver following this steps:
 
-![alt text](image.png)
+![alt text](dbeaver.png)
 
 - Server Host: localhost
 - Port: 3307  (the door mapped in your docker-compose.yml)
