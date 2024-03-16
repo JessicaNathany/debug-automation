@@ -5,7 +5,7 @@ The project is for automation, allowing you to run various projects in container
 
 - 📂 **Applications** - each application should have a folder and contain its own separate informations
 
-- 📂 **Dabases** - database scripts for create tables and insert
+- 📂 **Databases** - database scripts for create tables and insert
 
 - 📂 **Scripts** - applications scripts shell to configure database and APis in container, called docker-compose file
 
