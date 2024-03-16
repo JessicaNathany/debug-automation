@@ -12,8 +12,6 @@ Create table Banner
     Active bit,
     UpdateDate datetime null
 );  
---------------------------------------------------------------------------------
--- Create Category table
 
 Create table Category 
 (
@@ -22,9 +20,6 @@ Create table Category
     Name varchar(50) not null
 );  
 
---------------------------------------------------------------------------------
--- Create Contact table
-
 Create table Contact 
 (
     Id int auto_increment primary key,
@@ -32,8 +27,6 @@ Create table Contact
     Name varchar(50) not null
 );  
 
---------------------------------------------------------------------------------
--- Create Episode table
 
 Create table Episode 
 (
@@ -45,17 +38,14 @@ Create table Episode
     Url varchar(250) not null,
     ImageUrl longtext not null,
     PublicationDate datetime not null,
-    UpdateDate datetime null
-    Active bit ,
+    UpdateDate datetime null,
+    Active bit,
     Number int,
-    CategoryId int
+    CategoryId int,
     View int,
-    Like int
-    FOREIGN KEY (CategoryId) REFERENCES CAtegory(Id) 
+    Like int,
+    FOREIGN KEY (CategoryId) REFERENCES Category(Id) 
 ); 
-
---------------------------------------------------------------------------------
--- Create Team table
 
 Create table Team
 (
@@ -69,9 +59,6 @@ Create table Team
     Job varchar(300) null
 ); 
 
---------------------------------------------------------------------------------
--- Create UserAdmin table
-
 Create table UserAdmin
 (
     Id int auto_increment primary key,
@@ -80,9 +67,6 @@ Create table UserAdmin
     Email varchar(50) not null,
     HashedPassword varchar(500) not null
 ); 
-
---------------------------------------------------------------------------------
--- Create News table
 
 Create table News
 (

@@ -20,7 +20,8 @@ DB_EXISTS=$(docker-compose exec -T mysql mysql -uroot -proot -e "SHOW DATABASES 
 if [ -z "$DB_EXISTS" ]; then
   echo "Database does not exist. Creating database..."
   echo
-  docker-compose exec -T mysql mysql -uroot -proot -e "CREATE DATABASE cafedebug-mysql-local;"
+  docker-compose exec -T mysql mysql -h mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS cafedebug-mysql-local;"
+
 else
   echo "Database already exists. Skipping creation..."
   echo
