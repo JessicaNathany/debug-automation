@@ -150,3 +150,23 @@ VALUES(
     'https://twitter.com/He4rtDevs/status/1760688994067857839', 
     '2024-02-12 01:00:00', 
     '2024-02-12 01:00:00');
+
+
+INSERT INTO Advertisement (Code, Title, Description, StartDate, EndDate, AdvertisementType, UrlImage, Url, Active, UpdateDate) 
+VALUES(
+    'f4ab9eba-11c3-4a37-b701-8f52a2096d36', 
+    'Propaganda teste', 
+    'teste', 
+    '2024-02-12 01:00:00',
+    '2024-02-12 01:00:00',
+    2,
+    'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/90224279-f629-4e03-a80e-9c1731fefe1fcultura-devops.jpg', 
+    'https://twitter.com/He4rtDevs/status/1760688994067857839', 
+    1, 
+    '2024-02-12 01:00:00');
+
+    
+    
+    
+    
+   

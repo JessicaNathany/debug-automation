@@ -78,3 +78,30 @@ Create table News
     PublicationDate  datetime not null,
     UpdateDate datetime null
 ); 
+
+Create table Advertisement
+(
+    Id int auto_increment primary key,
+    Code char(36) not null,
+    Title varchar(500) null,
+    Description varchar(200) not null,
+    StartDate datetime not null,
+    EndDate datetime not null,
+    AdvertisementType int,
+    UrlImage varchar(500) not null,
+    Url varchar(250) not null,
+    Active  bit,
+    UpdateDate datetime null
+); 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
