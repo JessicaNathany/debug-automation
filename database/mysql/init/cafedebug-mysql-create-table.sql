@@ -1,5 +1,3 @@
--- Create Banner table
-
 Create table Banner 
 (
     Id int auto_increment primary key,
@@ -43,7 +41,7 @@ CREATE TABLE Episode (
     CategoryId INT,
     `View` INT,
     `Like` INT, -- Use crases aqui se 'Like' for o nome da coluna
-    FOREIGN KEY (CategoryId) REFERENCES Category(Id)
+    foreign key (CategoryId) REFERENCES Category(Id)
 ); 
 
 Create table Team
@@ -65,6 +63,16 @@ Create table UserAdmin
     Name varchar(50) not null,
     Email varchar(50) not null,
     HashedPassword varchar(500) not null
+); 
+
+Create table RefreshTokens 
+(
+    TokenId int primary key AUTO_INCREMENT,
+    UserId int not null
+    Token varchar(255),
+    ExpiresAt datetime,
+    IsActive bit,
+    foreign key (UserId) references UserAdmin(UserId)
 ); 
 
 Create table News
