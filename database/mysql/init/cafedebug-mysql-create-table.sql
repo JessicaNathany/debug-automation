@@ -25,7 +25,6 @@ Create table Contact
     Name varchar(50) not null
 );  
 
-
 CREATE TABLE Episode (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Code CHAR(36) NOT NULL,
@@ -40,7 +39,7 @@ CREATE TABLE Episode (
     Number INT,
     CategoryId INT,
     `View` INT,
-    `Like` INT, -- Use crases aqui se 'Like' for o nome da coluna
+    `Like` INT,
     foreign key (CategoryId) REFERENCES Category(Id)
 ); 
 
