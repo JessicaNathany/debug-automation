@@ -93,12 +93,12 @@ Create table Advertisement
 
 Create table RefreshTokens 
 (
-    TokenId int primary key AUTO_INCREMENT,
+    Id int primary key AUTO_INCREMENT,
     UserId int not null,
     Token varchar(255),
     ExpiresAt datetime,
     IsActive bit,
-    foreign key (UserId) references UserAdmin(UserId)
+    foreign key (UserId) references UserAdmin(Id)
 ); 
 
  
