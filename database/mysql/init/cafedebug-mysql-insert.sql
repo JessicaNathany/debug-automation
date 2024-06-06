@@ -145,7 +145,7 @@ INSERT INTO News (Code, Title, Description, UrlImage, NewsLink, PublicationDate,
 VALUES(
     'f3ab9efa-12e3-4a37-a701-8f52a2096d36', 
     'E aí! Você já tentou construir uma CLI em Go?', 
-    'Então, não perca a oportunidade de participar do Spaces "Desbravando o mundo das CLIs com Go" para mergulhar nesse universo fascinante, com a orientação da nossa prima @laislima_dev. ', 
+    'Então, não perca a oportunidade de participar do Spaces "Desbravando o mundo das CLIs com Go" para mergulhar nesse universo fascinante, com a orientação da nossa prima @laislima_dev.', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/90224279-f629-4e03-a80e-9c1731fefe1fcultura-devops.jpg', 
     'https://twitter.com/He4rtDevs/status/1760688994067857839', 
     '2024-02-12 01:00:00', 

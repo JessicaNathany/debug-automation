@@ -64,16 +64,6 @@ Create table UserAdmin
     HashedPassword varchar(500) not null
 ); 
 
-Create table RefreshTokens 
-(
-    TokenId int primary key AUTO_INCREMENT,
-    UserId int not null
-    Token varchar(255),
-    ExpiresAt datetime,
-    IsActive bit,
-    foreign key (UserId) references UserAdmin(UserId)
-); 
-
 Create table News
 (
     Id int auto_increment primary key,
@@ -101,9 +91,15 @@ Create table Advertisement
     UpdateDate datetime null
 ); 
 
- 
-
- 
+Create table RefreshTokens 
+(
+    TokenId int primary key AUTO_INCREMENT,
+    UserId int not null,
+    Token varchar(255),
+    ExpiresAt datetime,
+    IsActive bit,
+    foreign key (UserId) references UserAdmin(UserId)
+); 
 
  
 
