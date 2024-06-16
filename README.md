@@ -26,10 +26,11 @@ To database configure in local environment, following this steps. Notes for each
  ./cafedebug-setup.sh
 ```
 
-For generate users data
+To generate users data
 
 ```bash
  ./data-generator-setup.sh
+```
 
 ## Tests and Run 🧪
 For test you connection database in DBaver following this steps:
