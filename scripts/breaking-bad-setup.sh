@@ -54,10 +54,7 @@ docker-compose exec -T mysql mysql -uroot -proot breakingbad -e "source /breakin
 
 
 
-# Check if the cafedebug-backend.api container is running and Starting services
-# echo "Waiting for cafedebug-backend.api to start..."
+# Check if the breakingba.api container is running and Starting services
+# echo "Waiting for breakingba.api to start..."
 # sleep 20
 
-# Check if the cafedebug-frontend.api container is running and Starting services
-# echo "Waiting for cafedebug-frontend.api to start..."
-# sleep 20

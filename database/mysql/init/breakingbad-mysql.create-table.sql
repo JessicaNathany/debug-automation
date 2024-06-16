@@ -6,8 +6,9 @@ Create table Character
     NameActor varchar(50) not null,
     Status bit,
     Gender char(1),
-    ImageUrl varchar(250) not null,
-); -- verificar relacionamento entre as tabelas
+    Role varchar(100) null,
+    ImageUrl varchar(250) not null
+); 
 
 Create table Season 
 (
@@ -15,16 +16,17 @@ Create table Season
     Code char(36) not null,
     Name varchar(50) not null,
     AirDate varchar(50) not null,
-    Description varchar(500) not null,
-); -- verificar relacionamento entre as tabelas
-
+    Description varchar(500) not null
+); 
 
 Create table Episode 
 (
     Id int auto_increment primary key,
     Code char(36) not null,
     Name varchar(50) not null,
+    Description varchar(MAX) not null,
     AirDate varchar(50) not null,
     SeasonId int not null,
-    
-); -- verificar relacionamento entre as tabelas
+    FOREIGN KEY (SeasonId) REFERENCES Season(Id)
+);
+
