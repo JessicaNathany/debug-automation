@@ -30,7 +30,7 @@ To database configure in local environment, following this steps. Notes for each
 To generate users data
 
 ```bash
-  chmod +x cafedebug-setup.sh
+  chmod +x data-generator-setup.sh
  ./data-generator-setup.sh
 ```
 
