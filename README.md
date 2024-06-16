@@ -27,7 +27,7 @@ To database configure in local environment, following this steps. Notes for each
 ```
 
 
-To generate users data
+- To generate users data
 
 ```bash
  chmod +x data-generator-setup.sh
