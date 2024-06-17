@@ -30,8 +30,8 @@ To database configure in local environment, following this steps. Notes for each
 For generate users data
 
 ```bash
-  chmod +x data-generator.sh
-=======
+  chmod +x data-generator-setup.sh
+```
 
 - To generate users data
 
