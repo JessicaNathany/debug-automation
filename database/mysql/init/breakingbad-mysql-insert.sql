@@ -198,6 +198,15 @@ VALUES(
     'Served time in the Los Lunas state prison with Tuco Salamanca and Badger',    
     'https://breakingbad.fandom.com/wiki/Skinny_Pete?file=Cast+bb+800x600+skinny-pete.jpg');           
 
+ -- Christian "Combo" Ortega
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '41847e1f-7507-4c7d-ae51-41724e457dea', 
+    'Christian "Combo" Ortega', 
+    'Charles Baker', 
+    'M', 
+    'Served time in the Los Lunas state prison with Tuco Salamanca and Badger',    
+    'https://breakingbad.fandom.com/wiki/Skinny_Pete?file=Cast+bb+800x600+skinny-pete.jpg'); 
 
 --to be continued..
 

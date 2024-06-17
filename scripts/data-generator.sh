@@ -9,11 +9,6 @@ echo
 
 if [[ "$REPLY" == ^[Yy]$ ]]; then
     
-    for((i= 1; i<= 10; i++)); do
-        user_id="user_$i"
-        user_email="user$i@example.com"
-        # to be continued...
-
     # generate data users
     users=(
         '{
@@ -61,10 +56,18 @@ if [[ "$REPLY" == ^[Yy]$ ]]; then
     )
 
     #directory to store json file
-    JSON_DIR="$PROJECT_ROOT_DIR/data"
+    JSON_DIR="$PROJECT_ROOT_DIR/data/users"
 
     #create directory if not exists
     mkdir -p "$JSON_DIR"
 
-    # to be continued...
+    # generate json file for each user
+    for ((i=0; i<${#users[@]}; i++)); do
+        echo "${users[i]}" > "$JSON_DIR/user_$i.json"
+        echo "Generated: $JSON_DIR/user_$i.json"
+    done
 
+     echo "User data generation complete!"
+else
+    echo "User opted not to generate data. Exiting."
+fi
