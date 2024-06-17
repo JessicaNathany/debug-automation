@@ -7,13 +7,13 @@ echo "..:: Do you want to generate users data? (Y/N) ::.."
 read -p "Answer: " -n 1 -r
 echo
 
-if [[ "$REPLY" == ^[Yy]$ ]]; then
+if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     
     # generate data users
     users=(
         '{
             "firstName": "John", 
-            "secondName": "firstName", 
+            "secondName": "Doe", 
             "email": "john.doe@example.com", 
             "age": 30, 
             "password": "password@180", 
@@ -24,7 +24,7 @@ if [[ "$REPLY" == ^[Yy]$ ]]; then
             "zipCode": "62701", 
             "country": "USA", 
             "creditCardNumber": "1234-5678-1234-5678"
-        }',
+        }'
         '{
             "firstName": "Jane",
             "secondName": "Smith",
@@ -67,7 +67,7 @@ if [[ "$REPLY" == ^[Yy]$ ]]; then
         echo "Generated: $JSON_DIR/user_$i.json"
     done
 
-     echo "User data generation complete!"
+    echo "User data generation complete!"
 else
     echo "User opted not to generate data. Exiting."
 fi
