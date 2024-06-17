@@ -1,0 +1,14 @@
+{
+            "firstName": "John", 
+            "secondName": "Doe", 
+            "email": "john.doe@example.com", 
+            "age": 30, 
+            "password": "password@180", 
+            "phoneNumber": "123-456-7890", 
+            "address": "123 Main St", 
+            "city": "Springfield", 
+            "state": "IL", 
+            "zipCode": "62701", 
+            "country": "USA", 
+            "creditCardNumber": "1234-5678-1234-5678"
+        },

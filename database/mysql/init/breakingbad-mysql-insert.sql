@@ -201,12 +201,142 @@ VALUES(
  -- Christian "Combo" Ortega
 INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
 VALUES(
-    '41847e1f-7507-4c7d-ae51-41724e457dea', 
+    'dcffcc04-3447-4778-96b9-a8d2df0c96a9', 
     'Christian "Combo" Ortega', 
     'Charles Baker', 
     'M', 
-    'Served time in the Los Lunas state prison with Tuco Salamanca and Badger',    
-    'https://breakingbad.fandom.com/wiki/Skinny_Pete?file=Cast+bb+800x600+skinny-pete.jpg'); 
+    'Commonly referred to as Combo, was one of Jesse Pinkmans longtime friends',    
+    'https://static.wikia.nocookie.net/breakingbad/images/2/20/Combo_main.png/revision/latest?cb=20220817153203'); 
+
+ -- Jack Welker
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '751d0157-9e92-47cf-bc2b-75384955486e', 
+    'Jack Welker', 
+    'Michael Bowen', 
+    'M', 
+    'He is the leader of a criminal gang with white supremacist or neo-Nazi ideologies',    
+    'https://breakingbad.fandom.com/wiki/Jack_Welker?file=Jack5x13.png'); 
+
+ -- Gretchen Schwartz
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    'c7da579f-322f-40ae-bd78-ad2ede698a7a', 
+    'Gretchen Schwartz', 
+    'Jessica Hecht', 
+    'F', 
+    'She is Walter Whites former fiancé and chemistry lab partner and now co-owner of Gray Matter Technologies',    
+    'https://breakingbad.fandom.com/wiki/Gretchen_Schwartz?file=Cast+bb+700x1000+gretchen-schwartz-lg.jpg'); 
+
+ -- Tortuga
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '92c6bb40-a4be-42c9-b978-b48f0cdeeb0f', 
+    'Tortuga', 
+    'Danny trejo', 
+    'M', 
+    '',    
+    ''); 
+
+ -- Tyrus Kitt
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    'bb7147f1-b943-459b-be1d-18cea8924ae8', 
+    'Tyrus Kitt', 
+    'Ray Campbell', 
+    'M', 
+    'Member of the Los Pollos Hermanos security staf',    
+    'https://breakingbad.fandom.com/wiki/Tyrus_Kitt?file=TyrusKitt.jpg');
+
+ -- Juan Bolsa
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '4eb1f8e5-93b8-4449-8697-8440e4e25165', 
+    'Juan Bolsa', 
+    'Javier Grajeda', 
+    'M', 
+    'He is a high-ranking member and the co-founder of the Cartel ',    
+    'https://breakingbad.fandom.com/wiki/Juan_Bolsa?file=Juan+Bolsa+2009.png');    
+
+ -- Kuby
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '39bbcea9-e167-458b-ad66-aa2a0c997ceb', 
+    'Kuby', 
+    'Bill Burr', 
+    'M', 
+    'He is one of Saul Goodmans former henchmen',    
+    'https://breakingbad.fandom.com/wiki/Patrick_Kuby?file=Patrick+Kuby+2009.png');             
+
+ -- Steven Gomez
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    'f4bf5985-3cf1-4960-94f4-43ac6c735e31', 
+    'Steven Gomez', 
+    'Steven Michael', 
+    'M', 
+    'He is Hank Schraders partner at the Albuquerque DEA office',    
+    'https://breakingbad.fandom.com/wiki/Steven_Gomez?file=Gomie+2009.png');      
+
+ -- Victor
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '0bc8bb36-53cc-4631-bbfa-2f025b3d27e5', 
+    'Victor', 
+    'Jeremiah Bitsui', 
+    'M', 
+    'He is a loyal henchman of Gustavo Fring',    
+    'https://breakingbad.fandom.com/wiki/Victor?file=Victor+2009.jpg');      
+
+ -- Donald Margolis
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '9a4f60aa-53e6-4d77-b5a2-a4db4c2d20f4', 
+    'Donald Margolis', 
+    'Jon de Lancie', 
+    'M', 
+    'He is the father of Jane Margolis',    
+    'https://breakingbad.fandom.com/wiki/Donald_Margolis?file=Donald+2008.png'); 
+
+ -- Group Leader
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '79df593a-17c9-4e3d-b113-c5c4c8f3bbfc', 
+    'Group Leader', 
+    'Jere bruns', 
+    'M', 
+    '',    
+    '');    
+
+ -- George Merkert
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '79df593a-17c9-4e3d-b113-c5c4c8f3bbfc', 
+    'George Merkert', 
+    'Michael Shamus Wiles', 
+    'M', 
+    'He is the Assistant Special Agent in Charge (ASAC)',    
+    '');
+
+ -- No-Doze
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    'eeddce9a-192d-455e-8af6-ba5ab3048420', 
+    'No-Doze', 
+    'Cesar Garcia', 
+    'M', 
+    'He is one of Tuco Salamancas top lieutenants in his northern Cartel drug operation',    
+    'https://breakingbad.fandom.com/wiki/No-Doze?file=No-Doze+BCS+102.png');              
+
+ -- Marco Salamanca
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    'dc62da5a-8392-4a2d-afd4-d6226b2de263', 
+    'Marco Salamanca', 
+    '', 
+    'M', 
+    '',    
+    ''); 
 
 --to be continued..
 

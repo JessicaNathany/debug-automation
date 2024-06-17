@@ -36,7 +36,7 @@ For generate users data
 - To generate users data
 
 ```bash
- chmod +x data-generator-setup.sh
+ ./data-generator.sh
 ```
 
 ## Tests and Run 🧪
