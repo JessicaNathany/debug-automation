@@ -138,8 +138,8 @@ VALUES(
     'Sofware Developer Backend, Host e fundadora do Café Debug');
 
 INSERT INTO UserAdmin (Code, Name, Email, HashedPassword) 
-VALUES('c13655a9-68bb-47b2-b29d-3392f2b1a0b0', 'cafedebug', 'debugcafe@gmail.com', 'CC04C82A012DFB76D224B58D37314C0A');
--- MD5 Hash password cafedebug123
+VALUES('c13655a9-68bb-47b2-b29d-3392f2b1a0b0', 'cafedebug', 'debugcafe@gmail.com', 'cf8676b53315b632ec681f2065d6e3c993c3ebaeb667338658b40983d7ce663e');
+-- SHA 256 password cafedebug123
 
 INSERT INTO News (Code, Title, Description, UrlImage, NewsLink, PublicationDate, UpdateDate) 
 VALUES(
