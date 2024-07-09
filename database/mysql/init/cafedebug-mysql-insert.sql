@@ -1,6 +1,6 @@
 INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
     VALUES(
-    'AC29FC0A-7E38-4CC7-B6E8-9C8151E678B5', 
+    '49e74cc2-f2ee-4d4a-b54b-10b27f28a600', 
     'Banner perfil', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/e50f2bcf-597f-4017-9cd4-1163edce4598banner-perfil.png', 
     null, 
@@ -9,7 +9,7 @@ INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active)
 
 INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
     VALUES(
-    '3BE87F82-0F24-4003-849D-1EF890F1881C', 
+    'a45914cd-883c-4be2-8de6-9e6a42ee02e5', 
     'Discord do Café Debug', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/23ff38aa-41c1-42c6-8dc1-e8391bf53d23banner-discord-new.jpg', 
     'https://discord.gg/hGpFPsV2gB', 
@@ -18,7 +18,7 @@ INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active)
 
 INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
     VALUES(
-    '2A8F9254-5267-4C6E-A422-412BF1A2AFC4', 
+    '4bbbc8a6-cc59-4e48-9358-671b8eb0daab', 
     'Banner youtube Café Debug', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/4aba85c6-b200-485a-8bfa-eea3bb0347c1banneryoutube.jpg', 
     'https://www.youtube.com/c/Cafedebug', 
@@ -27,7 +27,7 @@ INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active)
 
 INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
     VALUES(
-    '5885c581-e4f7-4100-8c2b-1cb6ec1925c5', 
+    'c6d56d61-b6bc-420d-969b-53a8ad84e22b', 
     'Mentoria Tech', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/mentoria-tech-banner.png', 
     'https://site-mentoria-tech-4ikwj7rzj-weslleyfratini.vercel.app/', 
@@ -36,7 +36,7 @@ INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active)
 
 INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
 VALUES(
-'a3d069ad-46d2-4963-9a06-64e0da3a1591', 
+'956fcefc-5fbd-4ec4-abe8-5a15029429b3', 
 'Banner AGO Filmes', 
 'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/2e760a0b-14fe-4429-8cf4-f46b99f966c6ago-filmes-banner.jpg', 
 'https://thiagocarvalhofotografia.wordpress.com', 
@@ -44,28 +44,34 @@ VALUES(
 '2024-12-31 00:00:00', 1);
 
 INSERT INTO Category (Code, Name) 
-VALUES('2B6674BC-3C4C-4487-9240-3EAD9A5B9F0C', 'Linguagens de programação');
+VALUES('9873134f-c736-4e47-9f73-efcf162b431d', 'Linguagens de programação');
 
 INSERT INTO Category (Code, Name) 
-VALUES('A546908A-4A1C-4F14-AF06-2642EB82CBB8', 'DevOps');
+VALUES('335635e0-12f3-4254-b16f-ff8c2f398c69', 'DevOps');
 
 INSERT INTO Category (Code, Name) 
-VALUES('A3955A22-309E-4062-A463-700DF3704FEA', 'Entrevistas');
+VALUES('b57ec9e8-cd6f-408b-abc6-77b4cff98f08', 'Entrevistas');
 
 INSERT INTO Category (Code, Name) 
-VALUES('32DFF33C-A061-4788-8750-C329869846EF', 'Arquitetura de Software');
+VALUES('f50da7b7-d34d-460b-9548-63a4793ac04e', 'Arquitetura de Software');
 
 INSERT INTO Category (Code, Name) 
-VALUES('A2B45AD6-256B-45A5-AACF-5EBD1C45DBCB', 'Cybersecurity');
+VALUES('7d9107eb-8c54-4648-91a4-cac84a87f336', 'Cybersecurity');
+
+INSERT INTO Category (Code, Name) 
+VALUES('49d63ef5-633d-45c2-af11-c7d6a6ae84d5', 'Banco de Dados');
+
+INSERT INTO Category (Code, Name) 
+VALUES('0bae66bb-c501-4c88-849b-d4355d143522', 'IOT');
 
 INSERT INTO Contact (Code, Name) 
-VALUES('51bd02c5-44b4-4223-beff-e24d62e83202', 'marlibatista_costa6@bol.com.br');
+VALUES('506b32a1-2797-4f00-8765-5637a04be2aa', 'marlibatista_costa6@bol.com.br');
 
 INSERT INTO Contact (Code, Name) 
-VALUES('3eb77547-2006-47c8-9d25-a1bc3839023c', 'laurareis44@live.com');
+VALUES('3ad27918-5f7f-4239-aa53-31f680d688b1', 'laurareis44@live.com');
 
 INSERT INTO Contact (Code, Name) 
-VALUES('7a52c271-db86-4fd3-84fb-ec26c329422a', 'benjaminbraga_batista5@yahoo.com');
+VALUES('715f518b-f261-476a-8e92-f1b9abf5d6cd', 'benjaminbraga_batista5@yahoo.com');
 
 INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
 VALUES(
@@ -129,7 +135,7 @@ VALUES(
 
 INSERT INTO Team (Code, Name, UrlGitHub, UrlInstagram, UrlLinkedin, UrlImage, Job)
 VALUES(
-    '0cb23108-4a7d-4bf9-9503-863cc8cd400b', 
+    'd11aa2d9-0105-480d-8c03-c591fe4d3b46', 
     'Weslley Fratini',
     'https://github.com/WeslleyFratini', 
     'https://github.com/WeslleyFratini', 
@@ -138,7 +144,7 @@ VALUES(
     'Sofware Developer Backend, Host e fundadora do Café Debug');
 
 INSERT INTO UserAdmin (Code, Name, Email, HashedPassword) 
-VALUES('c13655a9-68bb-47b2-b29d-3392f2b1a0b0', 'cafedebug', 'debugcafe@gmail.com', 'cf8676b53315b632ec681f2065d6e3c993c3ebaeb667338658b40983d7ce663e');
+VALUES('c13655a9-68bb-47b2-b29d-3392f2b1a0b0', 'cafedebug', 'debugcafe@local.com', 'cf8676b53315b632ec681f2065d6e3c993c3ebaeb667338658b40983d7ce663e');
 -- SHA 256 password cafedebug123
 
 INSERT INTO News (Code, Title, Description, UrlImage, NewsLink, PublicationDate, UpdateDate) 
@@ -164,9 +170,3 @@ VALUES(
     'https://twitter.com/He4rtDevs/status/1760688994067857839', 
     1, 
     '2024-02-12 01:00:00');
-
-    
-    
-    
-    
-   
