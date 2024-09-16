@@ -95,8 +95,9 @@ Create table RefreshTokens
 (
     Id int primary key AUTO_INCREMENT,
     UserId int not null,
+    UserName varchar(50),
     Token varchar(255),
-    ExpiresAt datetime,
+    ExpirationDate datetime,
     IsActive bit,
     foreign key (UserId) references UserAdmin(Id)
 ); 

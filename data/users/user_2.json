@@ -1,14 +1,14 @@
 {
-            "firstName": "Jéssica",
-            "secondName": "Nathany",
-            "email": "jnathany@example.com", 
-            "age": 34,
-            "password": "password@180",
-            "phoneNumber": "55-1198655400", 
-            "address": "Rua das Flores, 123", 
-            "city": "Boa Cidade", 
-            "state": "SP", 
-            "zipCode": "05042000", 
-            "country": "BRA",
-            "creditCardNumber": "7789-5678-1163-5890"
-        }
+    "firstName": "Jéssica",
+    "secondName": "Nathany",
+    "email": "jnathany@example.com", 
+    "age": 34,
+    "password": "password@180",
+    "phoneNumber": "55-1198655400", 
+    "address": "Rua das Flores, 123", 
+    "city": "Boa Cidade", 
+    "state": "SP", 
+    "zipCode": "05042000", 
+    "country": "BRA",
+    "creditCardNumber": "7789-5678-1163-5890"
+}

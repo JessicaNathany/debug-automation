@@ -3,7 +3,7 @@
 # Define the root directory of the project (one level up from the script directory)
 PROJECT_ROOT_DIR="$(dirname "$0")/.."
 
-echo "..:: Do you want to generate users data? (Y/N) ::.."
+echo "..:: Do you want to generate test data? (Y/N) ::.."
 read -p "Answer: " -n 1 -r
 echo
 
@@ -71,3 +71,4 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
 else
     echo "User opted not to generate data. Exiting."
 fi
+# deixar genérico incluir dados do cartão e banco para massa de dados para teste
