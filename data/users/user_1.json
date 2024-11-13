@@ -1,14 +1,14 @@
 {
-            "firstName": "Jane",
-            "secondName": "Smith",
-            "email": "jane.smith@example.com", 
-            "age": 25,
-            "password": "password@180",
-            "phoneNumber": "123-4369-8890", 
-            "address": "123 Main St", 
-            "city": "Springfield", 
-            "state": "IL", 
-            "zipCode": "62701", 
-            "country": "USA",
-            "creditCardNumber": "1234-5678-8663-5890"
-        },
+    "firstName": "Jane",
+    "secondName": "Smith",
+    "email": "jane.smith@example.com", 
+    "age": 25,
+    "password": "password@180",
+    "phoneNumber": "123-4369-8890", 
+    "address": "123 Main St", 
+    "city": "Springfield", 
+    "state": "IL", 
+    "zipCode": "62701", 
+    "country": "USA",
+    "creditCardNumber": "1234-5678-8663-5890"
+}

@@ -205,7 +205,7 @@ VALUES(
     'Christian "Combo" Ortega', 
     'Charles Baker', 
     'M', 
-    'Commonly referred to as Combo, was one of Jesse Pinkmans longtime friends',    
+    'Commonly referred to as Combo, was one of Jesse Pinkman''s longtime friends',    
     'https://static.wikia.nocookie.net/breakingbad/images/2/20/Combo_main.png/revision/latest?cb=20220817153203'); 
 
  -- Jack Welker
@@ -235,8 +235,8 @@ VALUES(
     'Tortuga', 
     'Danny trejo', 
     'M', 
-    '',    
-    ''); 
+    '"Tortuga" (literally "Tortoise" in Spanish) is a Cartel drug runner who works for Juan Bolsa. He is also secretly a criminal informant to the DEA in El Paso about the inner workings of the cartel.',    
+    'https://breakingbad.fandom.com/wiki/Tortuga?file=Ep-7-6.jpg'); 
 
  -- Tyrus Kitt
 INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
@@ -305,8 +305,8 @@ VALUES(
     'Group Leader', 
     'Jere bruns', 
     'M', 
-    '',    
-    '');    
+    'The "Group Leader" is Jesse Pinkman''s primary counsellor at the rehabilitation clinic where he was previously a patient.',    
+    'https://breakingbad.fandom.com/wiki/Group_Leader_(Breaking_Bad)?file=Group_Leader_2009.png');    
 
  -- George Merkert
 INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
@@ -316,7 +316,7 @@ VALUES(
     'Michael Shamus Wiles', 
     'M', 
     'He is the Assistant Special Agent in Charge (ASAC)',    
-    '');
+    'https://breakingbad.fandom.com/wiki/George_Merkert?file=Merkert+2008.png');
 
  -- No-Doze
 INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
@@ -331,18 +331,205 @@ VALUES(
  -- Marco Salamanca
 INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
 VALUES(
-    'dc62da5a-8392-4a2d-afd4-d6226b2de263', 
+    'c508983e-a333-4500-a98d-8314845c9430', 
     'Marco Salamanca', 
-    '', 
+    'Luis Moncada', 
     'M', 
-    '',    
-    ''); 
+    'As members of the Salamanca family',    
+    'https://breakingbad.fandom.com/wiki/The_Cousins?file=Cast+bb+800x600+the-cousins.jpg'); 
 
---to be continued..
+ -- Leonel Salamanca
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '18d2390e-6f81-4600-8568-1355ec8fac93', 
+    'Leonel Salamanca', 
+    'Luis Moncada', 
+    'M', 
+    'As members of the Salamanca family',    
+    'https://breakingbad.fandom.com/wiki/The_Cousins?file=Cast+bb+800x600+the-cousins.jpg'); 
 
-  -- Season 
-INSERT INTO Character (Code, Name, AirDate, Description) 
-VALUES();   
+-- Gaff
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    'dc62da5a-8392-4a2d-afd4-d6226b2de263', 
+    'Gaff', 
+    'Mauricio Compte', 
+    'M', 
+    'Gaff is the chief emissary in the Cartel''s New Mexico territory, serving as the primary enforcer, hitman and right-hand man of Don Eladio Vuente.',    
+    'https://breakingbad.fandom.com/wiki/Gaff?file=Gaff_-_%28Problem_Dog%29.png'); 
+
+-- Gonzo
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '81d1a1e6-f024-46c8-b871-8a99d2a62d91', 
+    'Gonzo', 
+    'Jesus Jr', 
+    'M', 
+    'Gonzalo, nicknamed "Gonzo", was a Cartel lieutenant',    
+    'https://breakingbad.fandom.com/wiki/Gonzo?file=Gonzo+BCS+102.png');
+
+-- Jake Pinkman
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    'b965698c-dece-497b-a613-1aadb7e8dc3c', 
+    'Jake Pinkman', 
+    'Beijamin Petry', 
+    'M', 
+    'Jacob "Jake" Pinkman is the younger brother of Jesse Pinkman and the son of Adam & Diane Pinkman.',    
+    'https://breakingbad.fandom.com/wiki/Jake_Pinkman?file=Jake_Pinkman_2008.png');
+
+-- Francesca Liddy
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '7baabaa9-90a1-41da-9d22-f5f9522b7c06', 
+    'Francesca Liddy', 
+    'Tina Parker', 
+    'F', 
+    'Francesca Liddy is the former secretary for Saul Goodman & Associates, who worked as a personal receptionist for Saul Goodman before his retirement from practicing law',    
+    'https://static.wikia.nocookie.net/breakingbad/images/1/1b/Francesca.png/revision/latest?cb=20220512163520');
+
+-- Diane Pinkman
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '134e5012-df4f-4a4d-bba2-bbcf639b649b', 
+    'Diane Pinkman', 
+    'Tess Harper', 
+    'F', 
+    'Diane Pinkman is the wife of Adam Pinkman and mother of Jesse and Jake Pinkman.',    
+    'https://breakingbad.fandom.com/wiki/Diane_Pinkman?file=Diane+Pinkman.png');
+
+-- Rival Dealer
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '81c676c1-c3cc-4d9b-b8a0-a302f34772cb', 
+    'Rival Dealer', 
+    'Mike Seal', 
+    'M', 
+    'The "Rival Dealers" are two street-level crystal meth dealers who work for Gustavo Fring and sell meth on behalf of Los Pollos Hermanos.',    
+    'https://breakingbad.fandom.com/wiki/Rival_Dealers?file=RivalDealerscar3x11.png');
+ 
+-- Clovis
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '624231f6-b604-47b9-8d4c-fa2e4fc81ef2', 
+    'Clovis', 
+    'Tom Kiesche', 
+    'M', 
+    'Clovis is Badgers cousin who operates a vehicle towing and repair service.',    
+    'https://breakingbad.fandom.com/wiki/Clovis?file=Clovis.JPG');
+
+-- Dave
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '28a8f3ef-d4e6-4be8-b7e2-385e51d3a0c5', 
+    'Dave', 
+    'Bruce McKenzie', 
+    'M', 
+    'Dave is the psychiatrist of Marie Schrader. He helps her through her troubles and kleptomania.',    
+    'https://breakingbad.fandom.com/wiki/Dave?file=Dave.png');
+
+-- Kenny
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '0b700a9f-6241-4f3b-b8ea-b5567c256e99', 
+    'Kenny', 
+    'Kevin Rankin', 
+    'M', 
+    'Kenny is a lieutenant in Jack Welkers Gang.',    
+    'https://breakingbad.fandom.com/wiki/Kenny?file=Kenny5x13.png');
+
+-- Louis Corbett
+INSERT INTO Character (Code, Name, NameActor, Gender, Role, ImageUrl) 
+VALUES(
+    '2a2e03a6-bae4-4f65-a2ba-bd655549b9be', 
+    'Louis Corbett', 
+    'Caleb Landry Jones', 
+    'M', 
+    'Louis Corbett is Walter White Jr.s best friend. They both attend J. P. Wynne High School.',    
+    'https://breakingbad.fandom.com/wiki/Louis_Corbett?file=2x04+-+Louis.jpg');
+
+
+--https://www.imdb.com/title/tt0959621/?ref_=ttep_ep1
+-- to need include character's list
+
+-- S1.E1 ∙ Pilot
+INSERT INTO Episode (Code, Name, AirDate, Description) 
+VALUES(
+    '468c25e7-45ad-4cc6-9f20-1f8fc7b5120f',
+    'Pilot',
+    '2008-01-20',
+    'Diagnosed with terminal lung cancer, chemistry teacher Walter White teams up with former student Jesse Pinkman to cook and sell crystal meth.'
+);  
+
+-- S1.E2 ∙ Cat's in the Bag...
+INSERT INTO Episode (Code, Name, AirDate, Description) 
+VALUES(
+    '468c25e7-45ad-4cc6-9f20-1f8fc7b5120f',
+    'Cat''s in the Bag...',
+    '2008-01-27',
+    'After their first drug deal goes terribly wrong, Walt and Jesse are forced to deal with a corpse and a prisoner. Meanwhile, Skyler grows suspicious of Walts activities.'
+); 
+
+-- S1.E3 ∙ ...And the Bag's in the River
+INSERT INTO Episode (Code, Name, AirDate, Description) 
+VALUES(
+    'fa8cd763-fb59-47a0-822e-9c3ff83f7784',
+    '...And the Bag''s in the River',
+    '2008-02-10',
+    'After their first drug deal goes terribly wrong, Walt and Jesse are forced to deal with a corpse and a prisoner. Meanwhile, Skyler grows suspicious of Walts activities.'
+); 
+
+-- S1.E4 ∙ Cancer Man
+INSERT INTO Episode (Code, Name, AirDate, Description) 
+VALUES(
+    '8ef39afe-4043-4114-b150-f2804030ccc3',
+    'Cancer Man',
+    '2008-02-17',
+    'Walt tells the rest of his family about his cancer. Jesse tries to make amends with his own parents.'
+); 
+
+-- S1.E5 ∙ Gray Matter
+INSERT INTO Episode (Code, Name, AirDate, Description) 
+VALUES(
+    'b4afd8cf-a0ae-4f49-b91e-0d836c73f379',
+    'Gray Matter',
+    '2008-02-24',
+    'Walt rejects everyone who tries to help him with the cancer. Jesse tries his best to create Walt''s meth, with the help of an old friend.'
+); 
+
+-- S1.E6 ∙ Crazy Handful of Nothin'
+INSERT INTO Episode (Code, Name, AirDate, Description) 
+VALUES(
+    'ab8369d6-04fb-42a7-b5a7-d1107dce79d4',
+    'Gray Matter',
+    '2008-03-02',
+    'With the side effects and cost of his treatment mounting, Walt demands that Jesse finds a wholesaler to buy their drugs - which lands him in trouble.'
+); 
+
+-- S1.E7 ∙ A No-Rough-Stuff-Type Deal
+INSERT INTO Episode (Code, Name, AirDate, Description) 
+VALUES(
+    'b4afd8cf-a0ae-4f49-b91e-0d836c73f379',
+    'Gray Matter',
+    '2008-03-09',
+    'Walt and Jesse try to up their game by making more of the crystal every week for Tuco. Unfortunately, some of the ingredients they need are not easy to find. Meanwhile, Skyler realizes that her sister is a shoplifter.'
+);
+
+-- S1.E7 ∙ A No-Rough-Stuff-Type Deal
+INSERT INTO Episode (Code, Name, AirDate, Description) 
+VALUES(
+    'b4afd8cf-a0ae-4f49-b91e-0d836c73f379',
+    'Gray Matter',
+    '2008-03-09',
+    'Walt and Jesse try to up their game by making more of the crystal every week for Tuco. Unfortunately, some of the ingredients they need are not easy to find. Meanwhile, Skyler realizes that her sister is a shoplifter.'
+);
+
+
+
+
+
+
+
 
  -- Episodes   
 
