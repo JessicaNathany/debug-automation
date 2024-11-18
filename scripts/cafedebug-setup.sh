@@ -63,15 +63,19 @@ SQL_CREATE_PATH="../database/mysql/init/cafedebug-mysql-create-table.sql"
 SQL_INSERT_PATH="../database/mysql/init/cafedebug-mysql-insert.sql"
 
 # Copy the table script to the MySQL container
+echo "Copy the table script to the MySQL container..."
 docker cp "$SQL_CREATE_PATH" cafedebugdb:/cafedebug-mysql-create-table.sql
 
 # Execute the script to create the tables in the MySQL container
+echo "xecute the script to create the tables in the MySQL container"
 docker-compose exec -T mysql mysql -uroot -proot cafedebug-mysql-local -e "source /cafedebug-mysql-create-table.sql"
 
 # Copy the insert script to the MySQL container
+echo "Copy the insert script to the MySQL container"
 docker cp "$SQL_INSERT_PATH" cafedebugdb:/cafedebug-mysql-insert.sql
 
 # Execute insert script in MySQL
+echo "Execute insert script in MySQL"
 docker-compose exec -T mysql mysql -uroot -proot cafedebug-mysql-local -e "source /cafedebug-mysql-insert.sql"
 
 

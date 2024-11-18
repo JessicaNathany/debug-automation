@@ -4,7 +4,6 @@ Create table Character
     Code char(36) not null,
     Name varchar(50) not null,
     NameActor varchar(50) not null,
-    Status bit,
     Gender char(1),
     Role varchar(100) null,
     ImageUrl varchar(250) not null
