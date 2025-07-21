@@ -8,6 +8,8 @@ CREATE TABLE Characters (
     ImageUrl VARCHAR(250) NOT NULL
 );
 
+
+
 -- CREATE TABLE Season (
 --     Id INT AUTO_INCREMENT PRIMARY KEY,
 --     Code CHAR(36) NOT NULL,
