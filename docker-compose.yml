@@ -1,6 +1,6 @@
 version: '3.8'
-services: 
-  mysql:
+services:
+  cafedebugdb:
     container_name: cafedebugdb
     image: mysql:5.7
     volumes:
@@ -9,7 +9,63 @@ services:
       MYSQL_ROOT_PASSWORD: "root"
       MYSQL_DATABASE: cafedebug-mysql-local
     ports:
-      - "3307:3306" 
+      - "3307:3306"
+
+  breakingbaddb:
+    container_name: breakingbaddb
+    image: mysql:5.7
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: breakingbad
+    ports:
+      - "3308:3306"
+
+  # backend:
+  #   container_name: cafedebug-backend      
+  #   build: 
+  #     context: ./path/to/your/backend/Dockerfile
+  #   volumes:
+  #     - ./path/to/your/backend:/app
+  #   ports:
+  #     - "8000:8000"
+  #   depends_on:
+  #     - mysql  
+
+  # frontend:
+  #   container_name: cafedebug-frontend      
+  #   build: 
+  #     context: ./path/to/your/backend/Dockerfile
+  #   volumes:
+  #     - ./path/to/your/backend:/app
+  #   ports:
+  #     - "8000:8000"
+  #   depends_on:
+  #     - backend
+
+# version: '3.8'
+# services: 
+#   mysql:
+#     container_name: cafedebugdb
+#     image: mysql:5.7
+#     volumes:
+#       - ./init:/docker-entrypoint-initdb.d
+#     environment:
+#       MYSQL_ROOT_PASSWORD: "root"
+#       MYSQL_DATABASE: cafedebug-mysql-local
+#     ports:
+#       - "3307:3306" 
+
+#     container_name: breakingbaddb
+#     image: mysql:5.7
+#     volumes:
+#       - ./init:/docker-entrypoint-initdb.d
+#     environment:
+#       MYSQL_ROOT_PASSWORD: "root"
+#       MYSQL_DATABASE: breakingbad
+#     ports:
+#       - "3308:3306"    
 
   # backend:
   #   container_name: cafedebug-backend      

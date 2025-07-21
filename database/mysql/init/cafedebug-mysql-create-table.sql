@@ -61,7 +61,9 @@ Create table UserAdmin
     Code char(36) not null,
     Name varchar(50) not null,
     Email varchar(50) not null,
-    HashedPassword varchar(500) not null
+    HashedPassword varchar(500) not null,
+    CreatedDate datetime null,
+    LastUpdate datetime null
 ); 
 
 Create table News
@@ -102,7 +104,6 @@ Create table RefreshTokens
     foreign key (UserId) references UserAdmin(Id)
 ); 
 
- 
 
  
 

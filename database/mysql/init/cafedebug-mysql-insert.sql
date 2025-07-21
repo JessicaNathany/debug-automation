@@ -143,8 +143,14 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/98c7af12-0c87-47b5-ba7f-99d6d4de1fd6weslley.jpg', 
     'Sofware Developer Backend, Host e fundadora do Café Debug');
 
-INSERT INTO UserAdmin (Code, Name, Email, HashedPassword) 
-VALUES('c13655a9-68bb-47b2-b29d-3392f2b1a0b0', 'cafedebug', 'debugcafe@local.com', 'cf8676b53315b632ec681f2065d6e3c993c3ebaeb667338658b40983d7ce663e');
+INSERT INTO UserAdmin (Code, Name, Email, HashedPassword, CreatedDate, LastUpdate) 
+VALUES(
+    'c13655a9-68bb-47b2-b29d-3392f2b1a0b0', 
+    'cafedebug', 
+    'debugcafe@local.com', 
+    'cf8676b53315b632ec681f2065d6e3c993c3ebaeb667338658b40983d7ce663e',
+    NOW(),
+    NOW());
 -- SHA 256 password cafedebug123
 
 INSERT INTO News (Code, Title, Description, UrlImage, NewsLink, PublicationDate, UpdateDate) 
