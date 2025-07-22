@@ -101,6 +101,8 @@ Create table RefreshTokens
     Token varchar(255),
     ExpirationDate datetime,
     IsActive bit,
+    CreatedDate datetime null,
+    LastUpdate datetime null,
     foreign key (UserId) references UserAdmin(Id)
 ); 
 
