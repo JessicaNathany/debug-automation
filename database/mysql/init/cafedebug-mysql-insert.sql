@@ -1,47 +1,47 @@
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem) 
     VALUES(
     '49e74cc2-f2ee-4d4a-b54b-10b27f28a600', 
     'Banner perfil', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/e50f2bcf-597f-4017-9cd4-1163edce4598banner-perfil.png', 
     null, 
     '2020-12-16 00:00:00', 
-    '2024-12-31 00:00:00', 1);
+    '2024-12-31 00:00:00', 1, NOW(), 1);
 
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem) 
     VALUES(
     'a45914cd-883c-4be2-8de6-9e6a42ee02e5', 
     'Discord do Café Debug', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/23ff38aa-41c1-42c6-8dc1-e8391bf53d23banner-discord-new.jpg', 
     'https://discord.gg/hGpFPsV2gB', 
     '2021-08-28 00:00:00', 
-    '2024-12-31 00:00:00', 1);
+    '2024-12-31 00:00:00', 1, NOW(), 2);
 
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem) 
     VALUES(
     '4bbbc8a6-cc59-4e48-9358-671b8eb0daab', 
     'Banner youtube Café Debug', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/4aba85c6-b200-485a-8bfa-eea3bb0347c1banneryoutube.jpg', 
     'https://www.youtube.com/c/Cafedebug', 
     '2020-12-16 00:00:00', 
-    '2024-12-31 00:00:00', 1);
+    '2024-12-31 00:00:00', 1, NOW(), 3);
 
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem) 
     VALUES(
     'c6d56d61-b6bc-420d-969b-53a8ad84e22b', 
     'Mentoria Tech', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/mentoria-tech-banner.png', 
     'https://site-mentoria-tech-4ikwj7rzj-weslleyfratini.vercel.app/', 
     '2020-12-16 00:00:00', 
-    '2024-12-31 00:00:00', 1);
+    '2024-12-31 00:00:00', 1, NOW(), 4);
 
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem) 
 VALUES(
 '956fcefc-5fbd-4ec4-abe8-5a15029429b3', 
 'Banner AGO Filmes', 
 'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/2e760a0b-14fe-4429-8cf4-f46b99f966c6ago-filmes-banner.jpg', 
 'https://thiagocarvalhofotografia.wordpress.com', 
 '2022-06-09 09:00:00', 
-'2024-12-31 00:00:00', 1);
+'2024-12-31 00:00:00', 1, NOW(), 5);
 
 INSERT INTO Category (Code, Name) 
 VALUES('9873134f-c736-4e47-9f73-efcf162b431d', 'Linguagens de programação');
@@ -72,6 +72,7 @@ VALUES('3ad27918-5f7f-4239-aa53-31f680d688b1', 'laurareis44@live.com');
 
 INSERT INTO Contact (Code, Name) 
 VALUES('715f518b-f261-476a-8e92-f1b9abf5d6cd', 'benjaminbraga_batista5@yahoo.com');
+
 
 INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
 VALUES(
@@ -123,6 +124,7 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/desenvolvimento-seguro.jpg', 
     '2024-02-12 01:00:00', 1, 5, 5, 10, 10);
 
+
 INSERT INTO Team (Code, Name, UrlGitHub, UrlInstagram, UrlLinkedin, UrlImage, Job)
 VALUES(
     '401ad9f0-66ed-4d83-8f68-5d2e9aa93cce', 
@@ -131,16 +133,6 @@ VALUES(
     'https://www.instagram.com/jnathanycarvalho/', 
     'https://www.linkedin.com/in/jessica-nathany-38260868/', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/eb3747ef-168f-408d-9156-06b36b79f3b5jessica.jpg', 
-    'Sofware Developer Backend, Host e fundadora do Café Debug');
-
-INSERT INTO Team (Code, Name, UrlGitHub, UrlInstagram, UrlLinkedin, UrlImage, Job)
-VALUES(
-    'd11aa2d9-0105-480d-8c03-c591fe4d3b46', 
-    'Weslley Fratini',
-    'https://github.com/WeslleyFratini', 
-    'https://github.com/WeslleyFratini', 
-    'https://www.linkedin.com/in/weslley-fratini/', 
-    'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/98c7af12-0c87-47b5-ba7f-99d6d4de1fd6weslley.jpg', 
     'Sofware Developer Backend, Host e fundadora do Café Debug');
 
 INSERT INTO UserAdmin (Code, Name, Email, HashedPassword, CreatedDate, LastUpdate) 
@@ -153,6 +145,7 @@ VALUES(
     NOW());
 -- SHA 256 password cafedebug123
 
+
 INSERT INTO News (Code, Title, Description, UrlImage, NewsLink, PublicationDate, UpdateDate) 
 VALUES(
     'f3ab9efa-12e3-4a37-a701-8f52a2096d36', 
@@ -162,7 +155,6 @@ VALUES(
     'https://twitter.com/He4rtDevs/status/1760688994067857839', 
     '2024-02-12 01:00:00', 
     '2024-02-12 01:00:00');
-
 
 INSERT INTO Advertisement (Code, Title, Description, StartDate, EndDate, AdvertisementType, UrlImage, Url, Active, UpdateDate) 
 VALUES(

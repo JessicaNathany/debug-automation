@@ -8,7 +8,8 @@ Create table Banner
     StartDate datetime,
     EndDate datetime,
     Active bit,
-    UpdateDate datetime null
+    UpdateDate datetime null,
+    Ordem int null
 );  
 
 Create table Category 
@@ -48,7 +49,7 @@ Create table Team
     Id int auto_increment primary key,
     Code char(36) not null,
     Name varchar(50) not null,
-    UrlGitHub varchar(500) not null,
+    UrlGitHub varchar(500) null,
     UrlInstagram varchar(500) not null,
     UrlLinkedin varchar(500) not null,
     UrlImage varchar(500) not null,
