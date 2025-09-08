@@ -1,3 +1,6 @@
+SET NAMES utf8mb4;
+SET CHARACTER SET utf8mb4;
+SET character_set_connection=utf8mb4;
 INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem) 
     VALUES(
     '49e74cc2-f2ee-4d4a-b54b-10b27f28a600', 

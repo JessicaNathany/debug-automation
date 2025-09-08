@@ -1,4 +1,13 @@
 -- Characters
+
+ INSERT INTO Season (Code, Name, AirDate, Description) 
+ VALUES
+    ('1d26e402-ed42-4d2a-9ef8-420a42bc4f98', 'Season 1', '2008-01-20', 'The first season of Breaking Bad.'),
+    ('8357241c-2a38-4fba-b6a9-ea1a279a1547', 'Season 2', '2009-03-08', 'The second season of Breaking Bad.'),
+    ('5238150d-a314-4fef-9db3-66e12d4ab469', 'Season 3', '2010-04-25', 'The third season of Breaking Bad.'),
+    ('dc3889b9-bb87-4155-97b1-8b873ae6d119', 'Season 4', '2011-07-17', 'The fourth season of Breaking Bad.'),
+    ('825b9271-6766-4333-955f-04ecbea098a3', 'Season 5', '2012-07-15', 'The fifth season of Breaking Bad.');
+
  INSERT INTO Characters (Code, Name, NameActor, Gender, Role, ImageUrl) 
  VALUES
     ('1d26e402-ed42-4d2a-9ef8-420a42bc4f98', 'Walter White', 'Bryan Cranston', 'M', 'Professor', 'https://breakingbad.fandom.com/wiki/Walter_White?file=BB-S5B-Walt-590.jpg'),
@@ -12,16 +21,60 @@
     ('ade0f3a6-c7b6-429d-88e9-5155f0902df5', 'Todd Alquist', 'Jesse Plemons', 'M', 'Cook and former exterminator for Vamonos Pest', 'https://breakingbad.fandom.com/wiki/Todd_Alquist?file=Todd+S5b.jpg'),
     ('f28a6c94-5b9b-4b43-b0ff-307b3b1badfc', 'Tuco Salamanca', 'Raymound Cruz', 'M', 'Mexican-American drug kingpin and a high-level distributor for the Cartels', 'https://breakingbad.fandom.com/wiki/Tuco_Salamanca?file=Cast+bb+800x600+tuco-salamanca.jpg');
 
--- Episodes
--- INSERT INTO Episode (Code, Name, AirDate, Description) 
--- VALUES
---     ('468c25e7-45ad-4cc6-9f20-1f8fc7b5120f', 'Pilot', '2008-01-20', 'Diagnosed with terminal lung cancer, chemistry teacher Walter White teams up with former student Jesse Pinkman to cook and sell crystal meth.'),
---     ('468c25e7-45ad-4cc6-9f20-1f8fc7b5120f', 'Cat''s in the Bag...', '2008-01-27', 'After their first drug deal goes terribly wrong, Walt and Jesse are forced to deal with a corpse and a prisoner. Meanwhile, Skyler grows suspicious of Walts activities.'),
---     ('fa8cd763-fb59-47a0-822e-9c3ff83f7784', '...And the Bag''s in the River', '2008-02-10', 'After their first drug deal goes terribly wrong, Walt and Jesse are forced to deal with a corpse and a prisoner. Meanwhile, Skyler grows suspicious of Walts activities.'),
---     ('8ef39afe-4043-4114-b150-f2804030ccc3', 'Cancer Man', '2008-02-17', 'Walt tells the rest of his family about his cancer. Jesse tries to make amends with his own parents.'),
---     ('b4afd8cf-a0ae-4f49-b91e-0d836c73f379', 'Gray Matter', '2008-02-24', 'Walt rejects everyone who tries to help him with the cancer. Jesse tries his best to create Walt''s meth, with the help of an old friend.'),
---     ('ab8369d6-04fb-42a7-b5a7-d1107dce79d4', 'Crazy Handful of Nothin''', '2008-03-02', 'With the side effects and cost of his treatment mounting, Walt demands that Jesse finds a wholesaler to buy their drugs - which lands him in trouble.'),
---     ('b4afd8cf-a0ae-4f49-b91e-0d836c73f379', 'A No-Rough-Stuff-Type Deal', '2008-03-09', 'Walt and Jesse try to up their game by making more of the crystal every week for Tuco. Unfortunately, some of the ingredients they need are not easy to find. Meanwhile, Skyler realizes that her sister is a shoplifter.');
+
+INSERT INTO Episode (Code, Name, AirDate, Description, SeasonId) 
+VALUES
+    (
+        '468c25e7-45ad-4cc6-9f20-1f8fc7b5120f', 
+        'Pilot', 
+        '2008-01-20', 
+        'Diagnosed with terminal lung cancer, chemistry teacher Walter White teams up with former student Jesse Pinkman to cook and sell crystal meth.',
+        1
+    ),
+    (
+        '468c25e7-45ad-4cc6-9f20-1f8fc7b5120f',
+        'Cat''s in the Bag...', 
+        '2008-01-27', 
+        'After their first drug deal goes terribly wrong, Walt and Jesse are forced to deal with a corpse and a prisoner. Meanwhile, Skyler grows suspicious of Walts activities.',
+        1
+    ),
+    (
+        'fa8cd763-fb59-47a0-822e-9c3ff83f7784', 
+        '...And the Bag''s in the River', 
+        '2008-02-10', 
+        'After their first drug deal goes terribly wrong, Walt and Jesse are forced to deal with a corpse and a prisoner. Meanwhile, Skyler grows suspicious of Walts activities.',
+        1
+    ),
+    (
+        '8ef39afe-4043-4114-b150-f2804030ccc3', 
+        'Cancer Man', 
+        '2008-02-17', 
+        'Walt tells the rest of his family about his cancer. Jesse tries to make amends with his own parents.', 
+        1
+    ),
+    (
+        'b4afd8cf-a0ae-4f49-b91e-0d836c73f379', 
+        'Gray Matter', 
+        '2008-02-24', 
+        'Walt rejects everyone who tries to help him with the cancer. Jesse tries his best to create Walt''s meth, with the help of an old friend.', 
+        1
+    ),
+    (
+        'ab8369d6-04fb-42a7-b5a7-d1107dce79d4', 
+        'Crazy Handful of Nothin''', 
+        '2008-03-02', 
+        'With the side effects and cost of his treatment mounting, Walt demands that Jesse finds a wholesaler to buy their drugs - which lands him in trouble.', 
+        1
+    ),
+    (
+    'b4afd8cf-a0ae-4f49-b91e-0d836c73f379', 
+    'A No-Rough-Stuff-Type Deal', 
+    '2008-03-09', 
+    'Walt and Jesse try to up their game by making more of the crystal every week for Tuco. Unfortunately, some of the ingredients they need are not easy to find. Meanwhile, Skyler realizes that her sister is a shoplifter.',
+    1
+    )
+
+
 
 -- -- Walter White
 -- INSERT INTO Characters (Id, Code, Name, NameActor, Gender, Role, ImageUrl) 
