@@ -1,83 +1,83 @@
 SET NAMES utf8mb4;
 SET CHARACTER SET utf8mb4;
 SET character_set_connection=utf8mb4;
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem,  CreatedBy, UpdatedBy) 
     VALUES(
     '49e74cc2-f2ee-4d4a-b54b-10b27f28a600', 
     'Banner perfil', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/e50f2bcf-597f-4017-9cd4-1163edce4598banner-perfil.png', 
     null, 
     '2020-12-16 00:00:00', 
-    '2024-12-31 00:00:00', 1, NOW(), 1);
+    '2024-12-31 00:00:00', 1, NOW(), 1, null, null);
 
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem, CreatedBy, UpdatedBy) 
     VALUES(
     'a45914cd-883c-4be2-8de6-9e6a42ee02e5', 
     'Discord do Café Debug', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/23ff38aa-41c1-42c6-8dc1-e8391bf53d23banner-discord-new.jpg', 
     'https://discord.gg/hGpFPsV2gB', 
     '2021-08-28 00:00:00', 
-    '2024-12-31 00:00:00', 1, NOW(), 2);
+    '2024-12-31 00:00:00', 1, NOW(), 2, null, null);
 
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem, CreatedBy, UpdatedBy) 
     VALUES(
     '4bbbc8a6-cc59-4e48-9358-671b8eb0daab', 
     'Banner youtube Café Debug', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/4aba85c6-b200-485a-8bfa-eea3bb0347c1banneryoutube.jpg', 
     'https://www.youtube.com/c/Cafedebug', 
     '2020-12-16 00:00:00', 
-    '2024-12-31 00:00:00', 1, NOW(), 3);
+    '2024-12-31 00:00:00', 1, NOW(), 3, null, null);
 
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem, CreatedBy, UpdatedBy) 
     VALUES(
     'c6d56d61-b6bc-420d-969b-53a8ad84e22b', 
     'Mentoria Tech', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/mentoria-tech-banner.png', 
     'https://site-mentoria-tech-4ikwj7rzj-weslleyfratini.vercel.app/', 
     '2020-12-16 00:00:00', 
-    '2024-12-31 00:00:00', 1, NOW(), 4);
+    '2024-12-31 00:00:00', 1, NOW(), 4, null, null);
 
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem, CreatedBy, UpdatedBy) 
 VALUES(
 '956fcefc-5fbd-4ec4-abe8-5a15029429b3', 
 'Banner AGO Filmes', 
 'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/2e760a0b-14fe-4429-8cf4-f46b99f966c6ago-filmes-banner.jpg', 
 'https://thiagocarvalhofotografia.wordpress.com', 
 '2022-06-09 09:00:00', 
-'2024-12-31 00:00:00', 1, NOW(), 5);
+'2024-12-31 00:00:00', 1, NOW(), 5, null, null);
 
-INSERT INTO Category (Code, Name) 
-VALUES('9873134f-c736-4e47-9f73-efcf162b431d', 'Linguagens de programação');
+INSERT INTO Category (Code, Name, CreatedBy, UpdatedBy) 
+VALUES('9873134f-c736-4e47-9f73-efcf162b431d', 'Linguagens de programação', null, null);
 
-INSERT INTO Category (Code, Name) 
-VALUES('335635e0-12f3-4254-b16f-ff8c2f398c69', 'DevOps');
+INSERT INTO Category (Code, Name, CreatedBy, UpdatedBy)
+VALUES('335635e0-12f3-4254-b16f-ff8c2f398c69', 'DevOps', null, null);
 
-INSERT INTO Category (Code, Name) 
-VALUES('b57ec9e8-cd6f-408b-abc6-77b4cff98f08', 'Entrevistas');
+INSERT INTO Category (Code, Name, CreatedBy, UpdatedBy) 
+VALUES('b57ec9e8-cd6f-408b-abc6-77b4cff98f08', 'Entrevistas', null, null);
 
-INSERT INTO Category (Code, Name) 
-VALUES('f50da7b7-d34d-460b-9548-63a4793ac04e', 'Arquitetura de Software');
+INSERT INTO Category (Code, Name, CreatedBy, UpdatedBy)
+VALUES('f50da7b7-d34d-460b-9548-63a4793ac04e', 'Arquitetura de Software', null, null);
 
-INSERT INTO Category (Code, Name) 
-VALUES('7d9107eb-8c54-4648-91a4-cac84a87f336', 'Cybersecurity');
+INSERT INTO Category (Code, Name, CreatedBy, UpdatedBy)
+VALUES('7d9107eb-8c54-4648-91a4-cac84a87f336', 'Cybersecurity', null, null);
 
-INSERT INTO Category (Code, Name) 
-VALUES('49d63ef5-633d-45c2-af11-c7d6a6ae84d5', 'Banco de Dados');
+INSERT INTO Category (Code, Name, CreatedBy, UpdatedBy)
+VALUES('49d63ef5-633d-45c2-af11-c7d6a6ae84d5', 'Banco de Dados', null, null);
 
-INSERT INTO Category (Code, Name) 
-VALUES('0bae66bb-c501-4c88-849b-d4355d143522', 'IOT');
+INSERT INTO Category (Code, Name, CreatedBy, UpdatedBy)
+VALUES('0bae66bb-c501-4c88-849b-d4355d143522', 'IOT', null, null);
 
-INSERT INTO Contact (Code, Name) 
-VALUES('506b32a1-2797-4f00-8765-5637a04be2aa', 'marlibatista_costa6@bol.com.br');
+INSERT INTO Contact (Code, Name, CreatedBy, UpdatedBy) 
+VALUES('506b32a1-2797-4f00-8765-5637a04be2aa', 'marlibatista_costa6@bol.com.br', null, null);
 
-INSERT INTO Contact (Code, Name) 
-VALUES('3ad27918-5f7f-4239-aa53-31f680d688b1', 'laurareis44@live.com');
+INSERT INTO Contact (Code, Name, CreatedBy, UpdatedBy) 
+VALUES('3ad27918-5f7f-4239-aa53-31f680d688b1', 'laurareis44@live.com', null, null);
 
-INSERT INTO Contact (Code, Name) 
-VALUES('715f518b-f261-476a-8e92-f1b9abf5d6cd', 'benjaminbraga_batista5@yahoo.com');
+INSERT INTO Contact (Code, Name, CreatedBy, UpdatedBy) 
+VALUES('715f518b-f261-476a-8e92-f1b9abf5d6cd', 'benjaminbraga_batista5@yahoo.com', null, null);
 
 
-INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy) 
 VALUES(
     'c3f3a4d1-077d-4cb7-8d4f-41929e5940a4', 
     '#1 React', 
@@ -85,9 +85,9 @@ VALUES(
     'Hoje faremos uma gravação sobre React, vamos entender mais sobre esse framework e como vem crescendo e ganhando força a cada dia.', 
     'https://omny.fm/shows/cafe-de-bug/49-react', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/ffa32ebd-26a6-415a-bc19-a9ed9c2d4eefreact.jpg', 
-    '2024-02-12 01:00:00', 1, 1, 1, 5, 10);
+    '2024-02-12 01:00:00', 1, 1, 1, 5, 10, null, null);
 
-INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy) 
 VALUES(
     '6a828c04-d0b8-46aa-869d-00d28d259ac3', 
     '#2 DevOps', 
@@ -95,9 +95,9 @@ VALUES(
     'Vamos conhecer um pouco sobre a cultura DevOps?', 
     'https://omny.fm/shows/cafe-de-bug/31-devops', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/90224279-f629-4e03-a80e-9c1731fefe1fcultura-devops.jpg', 
-    '2024-02-12 01:00:00', 1, 2, 2, 5, 10);
+    '2024-02-12 01:00:00', 1, 2, 2, 5, 10, null, null);
 
-INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy) 
 VALUES(
     '14f3b0ce-007e-419b-a74c-6c853c37c918', 
     '#3 DevRel,  Criação de Conteúdo e Carreira Tech com Gabs Ferreira', 
@@ -105,9 +105,9 @@ VALUES(
     'Neste programa entrevistamos o Gabriel Ferreira mais conhecido como Gabs. Ele é criador de conteúdo e é dono do seu próprio podcast chamado Olá Gabs. Gabs já foi desenvolvedor de software e instrutor na Alura. Fizemos um bate papo sobre, carreira, programação, criação de conteúdo e Dev Rel. Clique para escutar o episódio e compartilhe com seus amigos.', 
     'https://omny.fm/shows/cafe-de-bug/entrevista-gabs', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/entrevsita-gabs.jpg', 
-    '2024-02-12 01:00:00', 1, 3, 3, 10, 10);
+    '2024-02-12 01:00:00', 1, 3, 3, 10, 10, null, null);
 
-INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy) 
 VALUES(
     '9d513e5c-651d-4a90-ba1e-388714d8b619', 
     '#4 Arquitetura Limpa: Construindo Aplicações do Jeito Certo', 
@@ -115,9 +115,9 @@ VALUES(
     'Neste episódio, mergulhamos no universo das arquiteturas de software e boas práticas de desenvolvimento, com um olhar especial para o .NET, mas abrangendo conceitos aplicáveis a qualquer linguagem POO. Angelo Belchior, Daniel Jesus e Tiago Aguiar se juntam a nós nesta discussão enriquecedora, onde descomplicamos a Clean Architecture, arquiteturas em camadas, automação e segurança, tornando estes conhecimentos acessíveis independentemente da stack que você utiliza', 
     'https://omny.fm/shows/cafe-de-bug/134-arquitetura-limpa-construindo-aplica-es-do-jei', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/arquitetura-padroes-projeto.jpg', 
-    '2024-02-12 01:00:00', 1, 4, 4, 10, 10);
+    '2024-02-12 01:00:00', 1, 4, 4, 10, 10, null, null);
 
-INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy) 
 VALUES(
     'a8a50ace-c5d3-4999-8bc4-506e7fb01580', 
     '#5 Desenvolvimento Seguro', 
@@ -125,10 +125,10 @@ VALUES(
     'Nesse programa fizemos um bate papo para falar sobre desenvolvimento seguro, e alguns conceitos de segurança tais como: Shift-left e SAMM, um pouco sobre vulnerabilidades e ameaças. Como os desenvolvedores podem implementar um processo de desenvolvimento seguro?', 
     'https://omny.fm/shows/cafe-de-bug/115-desenvolvimento-seguro', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/desenvolvimento-seguro.jpg', 
-    '2024-02-12 01:00:00', 1, 5, 5, 10, 10);
+    '2024-02-12 01:00:00', 1, 5, 5, 10, 10, null, null);
 
 
-INSERT INTO Team (Code, Name, UrlGitHub, UrlInstagram, UrlLinkedin, UrlImage, Job)
+INSERT INTO Team (Code, Name, UrlGitHub, UrlInstagram, UrlLinkedin, UrlImage, Job, CreatedBy, UpdatedBy)
 VALUES(
     '401ad9f0-66ed-4d83-8f68-5d2e9aa93cce', 
     'Jéssica Nathany',
@@ -136,20 +136,18 @@ VALUES(
     'https://www.instagram.com/jnathanycarvalho/', 
     'https://www.linkedin.com/in/jessica-nathany-38260868/', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/eb3747ef-168f-408d-9156-06b36b79f3b5jessica.jpg', 
-    'Sofware Developer Backend, Host e fundadora do Café Debug');
+    'Sofware Developer Backend, Host e fundadora do Café Debug', null, null);
 
-INSERT INTO UserAdmin (Code, Name, Email, HashedPassword, CreatedDate, LastUpdate) 
+INSERT INTO UserAdmin (Code, Name, Email, HashedPassword, CreatedDate, LastUpdate, CreatedBy, UpdatedBy) 
 VALUES(
     'c13655a9-68bb-47b2-b29d-3392f2b1a0b0', 
     'cafedebug', 
     'debugcafe@local.com', 
     'cf8676b53315b632ec681f2065d6e3c993c3ebaeb667338658b40983d7ce663e',
-    NOW(),
-    NOW());
+    null, null, null, null);
 -- SHA 256 password cafedebug123
 
-
-INSERT INTO News (Code, Title, Description, UrlImage, NewsLink, PublicationDate, UpdateDate) 
+INSERT INTO News (Code, Title, Description, UrlImage, NewsLink, PublicationDate, CreatedBy, UpdatedBy) 
 VALUES(
     'f3ab9efa-12e3-4a37-a701-8f52a2096d36', 
     'E aí! Você já tentou construir uma CLI em Go?', 
@@ -157,9 +155,9 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/90224279-f629-4e03-a80e-9c1731fefe1fcultura-devops.jpg', 
     'https://twitter.com/He4rtDevs/status/1760688994067857839', 
     '2024-02-12 01:00:00', 
-    '2024-02-12 01:00:00');
+    null, null);
 
-INSERT INTO Advertisement (Code, Title, Description, StartDate, EndDate, AdvertisementType, UrlImage, Url, Active, UpdateDate) 
+INSERT INTO Advertisement (Code, Title, Description, StartDate, EndDate, AdvertisementType, UrlImage, Url, Active, CreatedBy, UpdatedBy) 
 VALUES(
     'f4ab9eba-11c3-4a37-b701-8f52a2096d36', 
     'Propaganda teste', 
@@ -169,5 +167,4 @@ VALUES(
     2,
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/90224279-f629-4e03-a80e-9c1731fefe1fcultura-devops.jpg', 
     'https://twitter.com/He4rtDevs/status/1760688994067857839', 
-    1, 
-    '2024-02-12 01:00:00');
+    1, null, null);

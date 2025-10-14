@@ -9,21 +9,27 @@ Create table Banner
     EndDate datetime,
     Active bit,
     UpdateDate datetime null,
-    Ordem int null
+    Ordem int null,
+    CreatedBy varchar(50) null,
+    UpdatedBy varchar(50) null
 );  
 
 Create table Category 
 (
     Id int auto_increment primary key,
     Code char(36) not null,
-    Name varchar(50) not null
+    Name varchar(50) not null,
+    CreatedBy varchar(50) null,
+    UpdatedBy varchar(50) null
 );  
 
 Create table Contact 
 (
     Id int auto_increment primary key,
     Code char(36) not null,
-    Name varchar(50) not null
+    Name varchar(50) not null,
+    CreatedBy varchar(50) null,
+    UpdatedBy varchar(50) null
 );  
 
 CREATE TABLE Episode (
@@ -41,6 +47,8 @@ CREATE TABLE Episode (
     CategoryId INT,
     `View` INT,
     `Like` INT,
+    CreatedBy varchar(50) null,
+    UpdatedBy varchar(50) null,
     foreign key (CategoryId) REFERENCES Category(Id)
 ); 
 
@@ -53,7 +61,9 @@ Create table Team
     UrlInstagram varchar(500) not null,
     UrlLinkedin varchar(500) not null,
     UrlImage varchar(500) not null,
-    Job varchar(300) null
+    Job varchar(300) null,
+    CreatedBy varchar(50) null,
+    UpdatedBy varchar(50) null
 ); 
 
 Create table UserAdmin
@@ -64,7 +74,9 @@ Create table UserAdmin
     Email varchar(50) not null,
     HashedPassword varchar(500) not null,
     CreatedDate datetime null,
-    LastUpdate datetime null
+    LastUpdate datetime null,
+    CreatedBy varchar(50) null,
+    UpdatedBy varchar(50) null
 ); 
 
 Create table News
@@ -76,7 +88,8 @@ Create table News
     UrlImage varchar(500) not null,
     NewsLink varchar(500) null,
     PublicationDate  datetime not null,
-    UpdateDate datetime null
+    CreatedBy varchar(50) null,
+    UpdatedBy varchar(50) null
 ); 
 
 Create table Advertisement
@@ -91,7 +104,8 @@ Create table Advertisement
     UrlImage varchar(500) not null,
     Url varchar(250) not null,
     Active  bit,
-    UpdateDate datetime null
+    CreatedBy varchar(50) null,
+    UpdatedBy varchar(50) null
 ); 
 
 Create table RefreshTokens 
@@ -105,10 +119,6 @@ Create table RefreshTokens
     LastUpdate datetime null,
     foreign key (UserId) references UserAdmin(Id)
 ); 
-
-
- 
-
  
 
 
