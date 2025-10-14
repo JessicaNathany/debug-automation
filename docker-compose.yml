@@ -23,7 +23,7 @@ services:
       - "3308:3306"
 
   # backend:
-  #   container_name: cafedebug-backend      
+  #   container_name: cafedebug-backend-api      
   #   build: 
   #     context: ./path/to/your/backend/Dockerfile
   #   volumes:
