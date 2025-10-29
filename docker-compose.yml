@@ -1,8 +1,7 @@
-version: '3.8'
 services:
   cafedebugdb:
     container_name: cafedebugdb
-    image: mysql:5.7
+    image: mysql:8.0
     volumes:
       - ./init:/docker-entrypoint-initdb.d
     environment:
@@ -13,7 +12,7 @@ services:
 
   breakingbaddb:
     container_name: breakingbaddb
-    image: mysql:5.7
+    image: mysql:8.0
     volumes:
       - ./init:/docker-entrypoint-initdb.d
     environment:
@@ -48,7 +47,7 @@ services:
 # services: 
 #   mysql:
 #     container_name: cafedebugdb
-#     image: mysql:5.7
+#     image: mysql:8.0
 #     volumes:
 #       - ./init:/docker-entrypoint-initdb.d
 #     environment:
@@ -58,7 +57,7 @@ services:
 #       - "3307:3306" 
 
 #     container_name: breakingbaddb
-#     image: mysql:5.7
+#     image: mysql:8.0
 #     volumes:
 #       - ./init:/docker-entrypoint-initdb.d
 #     environment:
