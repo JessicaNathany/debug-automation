@@ -77,7 +77,7 @@ INSERT INTO Contact (Code, Name, CreatedBy, UpdatedBy)
 VALUES('715f518b-f261-476a-8e92-f1b9abf5d6cd', 'benjaminbraga_batista5@yahoo.com', null, null);
 
 
-INSERT INTO Episode (Code, Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Active, `Number`, CategoryId, DurationInSeconds, Views, Likes, CreatedBy, UpdatedBy) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, DurationInSeconds, `View`, `Like`, CreatedBy, UpdatedBy) 
 VALUES(
     'c3f3a4d1-077d-4cb7-8d4f-41929e5940a4', 
     '#1 React', 
@@ -87,7 +87,7 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/ffa32ebd-26a6-415a-bc19-a9ed9c2d4eefreact.jpg', 
     '2024-02-12 01:00:00', 1, 1, 1, 5, 10, 8, null, null);
 
-INSERT INTO Episode (Code, Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Active, `Number`, CategoryId, DurationInSeconds, Views, Likes, CreatedBy, UpdatedBy) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, DurationInSeconds, `View`, `Like`, CreatedBy, UpdatedBy) 
 VALUES(
     '6a828c04-d0b8-46aa-869d-00d28d259ac3', 
     '#2 DevOps', 
@@ -97,7 +97,7 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/90224279-f629-4e03-a80e-9c1731fefe1fcultura-devops.jpg', 
     '2024-02-12 01:00:00', 1, 2, 2, 5, 10, 9, null, null);
 
-INSERT INTO Episode (Code, Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Active, `Number`, CategoryId, DurationInSeconds, Views, Likes, CreatedBy, UpdatedBy) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, DurationInSeconds, `View`, `Like`, CreatedBy, UpdatedBy) 
 VALUES(
     '14f3b0ce-007e-419b-a74c-6c853c37c918', 
     '#3 DevRel,  Criação de Conteúdo e Carreira Tech com Gabs Ferreira', 
@@ -107,7 +107,7 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/entrevsita-gabs.jpg', 
     '2024-02-12 01:00:00', 1, 3, 3, 10, 10, 10, null, null);
 
-INSERT INTO Episode (Code, Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Active, `Number`, CategoryId, DurationInSeconds, Views, Likes, CreatedBy, UpdatedBy) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, DurationInSeconds, `View`, `Like`, CreatedBy, UpdatedBy) 
 VALUES(
     '9d513e5c-651d-4a90-ba1e-388714d8b619', 
     '#4 Arquitetura Limpa: Construindo Aplicações do Jeito Certo', 
@@ -117,7 +117,7 @@ VALUES(
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/arquitetura-padroes-projeto.jpg', 
     '2024-02-12 01:00:00', 1, 4, 4, 10, 10, 1, null, null);
 
-INSERT INTO Episode (Code, Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Active, `Number`, CategoryId, DurationInSeconds, Views, Likes, CreatedBy, UpdatedBy) 
+INSERT INTO Episode (Code, Title, Description, ResumeDescription, Url, ImageUrl, PublicationDate, Active, `Number`, CategoryId, DurationInSeconds, `View`, `Like`, CreatedBy, UpdatedBy) 
 VALUES(
     'a8a50ace-c5d3-4999-8bc4-506e7fb01580', 
     '#5 Desenvolvimento Seguro', 
