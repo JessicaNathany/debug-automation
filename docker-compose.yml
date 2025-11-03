@@ -10,16 +10,16 @@ services:
     ports:
       - "3307:3306"
 
-  breakingbaddb:
-    container_name: breakingbaddb
-    image: mysql:8.0
-    volumes:
-      - ./init:/docker-entrypoint-initdb.d
-    environment:
-      MYSQL_ROOT_PASSWORD: "root"
-      MYSQL_DATABASE: breakingbad
-    ports:
-      - "3308:3306"
+  # breakingbaddb:
+  #   container_name: breakingbaddb
+  #   image: mysql:8.0
+  #   volumes:
+  #     - ./init:/docker-entrypoint-initdb.d
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: "root"
+  #     MYSQL_DATABASE: breakingbad
+  #   ports:
+  #     - "3308:3306"
 
   # backend:
   #   container_name: cafedebug-backend-api      
