@@ -40,23 +40,23 @@ sleep 10
 echo
 
 # Verify if the breakingbad database exist 
-BREAKING_BAD_DB_EXISTS=$(docker-compose exec -T mysql mysql -uroot -proot -e "SHOW DATABASES LIKE 'breakingbad'" | grep 'breakingbad')
+# BREAKING_BAD_DB_EXISTS=$(docker-compose exec -T mysql mysql -uroot -proot -e "SHOW DATABASES LIKE 'breakingbad'" | grep 'breakingbad')
 
-if [ -z "$BREAKING_BAD_DB_EXISTS" ]; then
-  echo "Database does not exist. Creating BreakingBad database..."
-  echo
-  echo
-  docker-compose exec -T mysql mysql -h mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS breakingbad CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+# if [ -z "$BREAKING_BAD_DB_EXISTS" ]; then
+#   echo "Database does not exist. Creating BreakingBad database..."
+#   echo
+#   echo
+#   docker-compose exec -T mysql mysql -h mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS breakingbad CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 
-else
-  echo "Database already exists. Skipping creation..."
-  echo
-fi
+# else
+#   echo "Database already exists. Skipping creation..."
+#   echo
+# fi
 
 # Verify if the cafedebug database exist 
-CAFEDEBUG_BAD_DB_EXISTS=$(docker-compose exec -T mysql mysql -uroot -proot -e "SHOW DATABASES LIKE 'cafedebug-mysql-local'" | grep 'cafedebug-mysql-local')
+CAFEDEBUG_DB_EXISTS=$(docker-compose exec -T mysql mysql -uroot -proot -e "SHOW DATABASES LIKE 'cafedebug-mysql-local'" | grep 'cafedebug-mysql-local')
 
-if [ -z "$CAFEDEBUG_BAD_DB_EXISTS" ]; then
+if [ -z "$CAFEDEBUG_DB_EXISTS" ]; then
   echo "Database does not exist. Creating CafeDebug database..."
   echo
   echo
@@ -73,37 +73,24 @@ echo
 sleep 20
 
 # # Paths to the SQL files from the project root
-BREAKINGBAD_SQL_CREATE_PATH="../database/mysql/init/breakingbad-mysql-create-table.sql"
-BREAKINGBAD_SQL_INSERT_PATH="../database/mysql/init/breakingbad-mysql-insert.sql"
-
-CAFEDEBUG_SQL_CREATE_PATH="../database/mysql/init/cafedebug-mysql-create-table.sql"
-CAFEDEBUG_SQL_INSERT_PATH="../database/mysql/init/cafedebug-mysql-insert.sql"
-
+CAFEDEBUG_SQL_CREATE_PATH="../database/mysql/cafedebugdb/cafedebug-mysql-create-table.sql"
+CAFEDEBUG_SQL_INSERT_PATH="../database/mysql/cafedebugdb/cafedebug-mysql-insert.sql"
 
 # Copy the table script to the MySQL container
 echo "Copy the table script to the MySQL container..."
-docker cp "$BREAKINGBAD_SQL_CREATE_PATH" breakingbaddb:/breakingbad-mysql-create-table.sql
 docker cp "$CAFEDEBUG_SQL_CREATE_PATH" cafedebugdb:/cafedebug-mysql-create-table.sql
 
 echo "execute the script to create the tables in the MySQL container"
-docker-compose exec -T breakingbaddb mysql -uroot -proot breakingbad -e "source /breakingbad-mysql-create-table.sql"
 docker-compose exec -T cafedebugdb mysql -uroot -proot cafedebug-mysql-local -e "source /cafedebug-mysql-create-table.sql"
 
 # Copy the insert script to the MySQL container
 echo "Copy the insert script to the MySQL container"
-docker cp "$BREAKINGBAD_SQL_INSERT_PATH" breakingbaddb:/breakingbad-mysql-insert.sql
 docker cp "$CAFEDEBUG_SQL_INSERT_PATH" cafedebugdb:/cafedebug-mysql-insert.sql
 
 # Execute insert script in MySQL
 echo "Execute insert script in MySQL"
-docker-compose exec -T breakingbaddb mysql -uroot -proot breakingbad -e "source /breakingbad-mysql-insert.sql"
 docker-compose exec -T cafedebugdb mysql -uroot -proot cafedebug-mysql-local -e "source /cafedebug-mysql-insert.sql"
 
-
-# Check if the cafedebug-backend.api container is running and Starting services
-# echo "Waiting for cafedebug-backend.api to start..."
-# sleep 20
-
-# Check if the cafedebug-frontend.api container is running and Starting services
-# echo "Waiting for cafedebug-frontend.api to start..."
+# Check if the cafedebug-ui container is running and Starting services
+# echo "Waiting for cafedebug-ui to start..."
 # sleep 20
