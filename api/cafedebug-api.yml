@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  cafedebug-api:
+    container_name: cafedebug-backend.api
+    image: cafedebug-backend-api:latest
+    environment:
+      - AWS_ACCESS_KEY_ID=minioadmin
+      - AWS_SECRET_KEY=minioadmin
+      - SMTP_SERVER=123
+      - SMTP_FROM=faleconosco.cafedebug@gmail.com
+      - DATABASE_PASSWORD=root
+      - CafedebugConnectionStringMySQL=cafedebug-mysql-local
+      # Application configuration (mapped to ASP.NET Core) will be added in future migration
+      - ConnectionStrings__CafedebugConnectionStringMySQL='Server=localhost;Port=3306;Database=cafedebug;User=root;Password=sua-senha;'
+      - JwtSettings__Issuer='https://api.cafedebug.com.br'
+      - JwtSettings__Audience='https://cafedebug.com.br'
+      - JwtSettings__SigningKey='sua-chave-secreta-minimo-32-caracteres-aqui'
+      - JwtSettings__ValidForMinutes=15
+      - JwtSettings__RefreshTokenValidForMinutes=10080
+      # HealthChecksUI entry (first health check)
+      - HealthChecksUI__HealthChecks__0__Name='Cafe Debug API Health'
+      - HealthChecksUI__HealthChecks__0__Uri='http://localhost:5000/health'

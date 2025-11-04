@@ -1,17 +1,6 @@
 version: '3.8'
 
 services:
-  cafedebugdb:
-    container_name: cafedebugdb
-    image: mysql:8.0
-    volumes:
-      - ./init:/docker-entrypoint-initdb.d
-    environment:
-      MYSQL_ROOT_PASSWORD: "root"
-      MYSQL_DATABASE: cafedebug-mysql-local
-    ports:
-      - "3307:3306"
-  
   minio:
     container_name: minio
     image: minio/minio:latest
@@ -20,7 +9,7 @@ services:
       MINIO_ROOT_USER: "minioadmin"
       MINIO_ROOT_PASSWORD: "minioadmin"
     volumes:
-      - ./svc/minio/data:/data
+      - ./data:/data
     ports:
       - "9000:9000"
       - "9001:9001"
@@ -43,4 +32,3 @@ services:
     environment:
       MINIO_ROOT_USER: "minioadmin"
       MINIO_ROOT_PASSWORD: "minioadmin"
-

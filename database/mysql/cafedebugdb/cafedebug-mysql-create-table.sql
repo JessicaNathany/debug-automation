@@ -92,35 +92,6 @@ Create table UserAdmin
     UpdatedBy varchar(50) null
 ); 
 
-Create table News
-(
-    Id int auto_increment primary key,
-    Code char(36) not null,
-    Title varchar(500) null,
-    Description varchar(200) not null,
-    UrlImage varchar(500) not null,
-    NewsLink varchar(500) null,
-    PublicationDate  datetime not null,
-    CreatedBy varchar(50) null,
-    UpdatedBy varchar(50) null
-); 
-
-Create table Advertisement
-(
-    Id int auto_increment primary key,
-    Code char(36) not null,
-    Title varchar(500) null,
-    Description varchar(200) not null,
-    StartDate datetime not null,
-    EndDate datetime not null,
-    AdvertisementType int,
-    UrlImage varchar(500) not null,
-    Url varchar(250) not null,
-    Active  bit,
-    CreatedBy varchar(50) null,
-    UpdatedBy varchar(50) null
-); 
-
 Create table RefreshTokens 
 (
     Id int primary key AUTO_INCREMENT,
