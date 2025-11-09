@@ -4,3 +4,5 @@
 # Common local files
 .DS_Store
 .env
+/data/
+/svc/minio/data/
