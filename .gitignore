@@ -1,0 +1,6 @@
+# Ignore Minio local storage
+/svc/minio/data/
+
+# Common local files
+.DS_Store
+.env
