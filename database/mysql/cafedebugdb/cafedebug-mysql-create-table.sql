@@ -1,4 +1,4 @@
-Create table Banner 
+Create table IF NOT EXISTS Banner 
 (
     Id int auto_increment primary key,
     Code char(36) not null,
@@ -8,13 +8,12 @@ Create table Banner
     StartDate datetime,
     EndDate datetime,
     Active bit,
-    UpdateDate datetime null,
-    Ordem int null,
-    CreatedBy varchar(50) null,
-    UpdatedBy varchar(50) null
+    UpdatedAt datetime null,
+    CreatedAt datetime null,
+    `Order` int null
 );  
 
-Create table Category 
+Create table IF NOT EXISTS Category 
 (
     Id int auto_increment primary key,
     Code char(36) not null,
@@ -23,7 +22,7 @@ Create table Category
     UpdatedBy varchar(50) null
 );  
 
-Create table Contact 
+Create table IF NOT EXISTS Contact 
 (
     Id int auto_increment primary key,
     Code char(36) not null,
@@ -32,7 +31,7 @@ Create table Contact
     UpdatedBy varchar(50) null
 );  
 
-CREATE TABLE Episode (
+CREATE TABLE IF NOT EXISTS Episode (
     Id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Code CHAR(36) NOT NULL,
     Title VARCHAR(250) NOT NULL,
@@ -65,7 +64,7 @@ CREATE TABLE Episode (
     INDEX IDX_Episodes_Title (Title(191))
 );
 
-Create table Team
+Create table IF NOT EXISTS Team
 (
     Id int auto_increment primary key,
     Code char(36) not null,
@@ -79,7 +78,7 @@ Create table Team
     UpdatedBy varchar(50) null
 ); 
 
-Create table UserAdmin
+Create table IF NOT EXISTS UserAdmin
 (
     Id int auto_increment primary key,
     Code char(36) not null,
@@ -92,7 +91,7 @@ Create table UserAdmin
     UpdatedBy varchar(50) null
 ); 
 
-Create table RefreshTokens 
+Create table IF NOT EXISTS RefreshTokens 
 (
     Id int primary key AUTO_INCREMENT,
     UserId int not null,

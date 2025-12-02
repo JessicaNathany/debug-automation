@@ -1,7 +1,12 @@
   #!/bin/bash
+set -euo pipefail
 
-  # Define the root directory of the project (one level up from the script directory)
-  PROJECT_ROOT_DIR="$(dirname "$0")/.."
+# Source functions for colored output and utilities
+SCRIPT_DIR="$(dirname "$0")"
+source "${SCRIPT_DIR}/functions.sh"
+
+# Define the root directory of the project (one level up from the script directory)
+  PROJECT_ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 
   # Default MySQL version
   MySQL_VERSION="5.7"
@@ -16,7 +21,7 @@
       fi
   fi
 
-  echo "Using MySQL version $MySQL_VERSION"
+  echo_info "Using MySQL version $MySQL_VERSION"
 
   # Use sed to replace the MySQL version in docker-compose.yml
   if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -36,65 +41,108 @@
 		COMPOSE_FILES+=("-f" "$svc_file")
 	  else
 		if [ -f "$svc_file" ]; then
-		  echo "Note: $svc_file exists but does not contain 'services:' — skipping inclusion"
+		  echo_info "Note: $svc_file exists but does not contain 'services:' — skipping inclusion"
 		fi
 	  fi
 	done
 
   # Start all services
-  echo "Starting all services..."
-  docker-compose -f "$PROJECT_ROOT_DIR/docker-compose.yml" down 
-  docker-compose -f "$PROJECT_ROOT_DIR/docker-compose.yml" up -d 
-  echo
-  echo
+  echo "Starting services using compose files: ${COMPOSE_FILES[*]}"
+  docker-compose "${COMPOSE_FILES[@]}" down || true
+  docker-compose "${COMPOSE_FILES[@]}" up -d
+  echo_ok "Services started successfully"
 
-  echo
-  echo "Waiting for containers to initialize..."
-  sleep 10 
-  echo
-
+  echo_info "Waiting for MySQL to complete initialization (this may take 1-2 minutes)..."
   
+  # Wait for MySQL to be completely ready - not just ping-able
+  MAX_WAIT=180  # Increased timeout for full initialization
+  WAITED=0
+  echo "Checking MySQL readiness..."
+  
+  while true; do
+    # Check if we can actually connect and run a query (not just ping)
+    if docker-compose "${COMPOSE_FILES[@]}" exec -T cafedebugdb mysql -uroot -proot -e "SELECT 1" >/dev/null 2>&1; then
+      echo_ok "MySQL is ready with password authentication."
+      MYSQL_AUTH="-uroot -proot"
+      break
+    elif docker-compose "${COMPOSE_FILES[@]}" exec -T cafedebugdb mysql -uroot -e "SELECT 1" >/dev/null 2>&1; then
+      echo_ok "MySQL is ready with no-password authentication."
+      MYSQL_AUTH="-uroot"
+      break
+    fi
+    
+    # Also check if MySQL is still initializing by looking for the "ready for connections" message
+    if docker logs cafedebugdb 2>&1 | tail -10 | grep -q "ready for connections.*port: 3306"; then
+      echo_info "MySQL reports ready, but connection test failed. Waiting a bit more..."
+      sleep 5
+    else
+      echo_info "MySQL still initializing... ($WAITED/$MAX_WAIT seconds)"
+    fi
+    
+    sleep 5
+    WAITED=$((WAITED+5))
+    if [ "$WAITED" -ge "$MAX_WAIT" ]; then
+      echo_error "Timed out waiting for MySQL to become ready. Logs:"
+      docker logs cafedebugdb --tail=50
+      exit 1
+    fi
+  done
+  
+  # Give MySQL a few more seconds to fully stabilize
+  echo_info "MySQL is ready. Waiting additional 10 seconds for full stabilization..."
+  sleep 10
 
-  # Verify if the cafedebug database exist 
-  CAFEDEBUG_DB_EXISTS=$(docker-compose exec -T mysql mysql -uroot -proot -e "SHOW DATABASES LIKE 'cafedebug-mysql-local'" | grep 'cafedebug-mysql-local')
-
-  if [ -z "$CAFEDEBUG_DB_EXISTS" ]; then
-    echo "Database does not exist. Creating CafeDebug database..."
-    echo
-    echo
-    docker-compose exec -T mysql mysql -h mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS cafedebug-mysql-local CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
-
-  else
-    echo "Database already exists. Skipping creation..."
-    echo
+  # Resolve the container id for the service (use docker-compose ps -q)
+  CID=$(docker-compose "${COMPOSE_FILES[@]}" ps -q cafedebugdb || true)
+  if [ -z "${CID:-}" ]; then
+    echo_warning "Warning: could not determine container id for cafedebugdb; falling back to service name"
+    CID="cafedebugdb"
   fi
 
-  # Waiting for MySQL to start
-  echo "Waiting for MySQL to start..."
-  echo
-  sleep 20
+  # Helper functions for MySQL operations using detected auth
+  run_mysql_cmd() {
+    # $1 is the SQL statement to run non-interactively
+    docker exec "${CID}" /usr/bin/mysql ${MYSQL_AUTH} -e "$1"
+  }
 
-  # # Paths to the SQL files from the project root
-  CAFEDEBUG_SQL_CREATE_PATH="../database/mysql/cafedebugdb/cafedebug-mysql-create-table.sql"
-  CAFEDEBUG_SQL_INSERT_PATH="../database/mysql/cafedebugdb/cafedebug-mysql-insert.sql"
+  run_mysql_stdin() {
+    # pipes stdin into mysql for the target database passed as first arg
+    local target_db="${1:-}"
+    docker exec -i "${CID}" /usr/bin/mysql ${MYSQL_AUTH} "${target_db}"
+  }
 
-  # Copy the table script to the MySQL container
-  echo "Copy the table script to the MySQL container..."
-  docker cp "$CAFEDEBUG_SQL_CREATE_PATH" cafedebugdb:/cafedebug-mysql-create-table.sql
+  # Ensure the target database exists
+  echo_info "Ensuring target database exists (cafedebug-mysql-local)..."
+  CREATE_DB_SQL='CREATE DATABASE IF NOT EXISTS `cafedebug-mysql-local` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;'
 
-  echo "execute the script to create the tables in the MySQL container"
-  docker-compose exec -T cafedebugdb mysql -uroot -proot cafedebug-mysql-local -e "source /cafedebug-mysql-create-table.sql"
+  run_mysql_cmd "$CREATE_DB_SQL"
+  echo_ok "Database ensured."
 
-  # Copy the insert script to the MySQL container
-  echo "Copy the insert script to the MySQL container"
-  docker cp "$CAFEDEBUG_SQL_INSERT_PATH" cafedebugdb:/cafedebug-mysql-insert.sql
+  # Paths to the SQL files from the project root
+  SQL_CREATE_PATH="$PROJECT_ROOT_DIR/database/mysql/cafedebugdb/cafedebug-mysql-create-table.sql"
+  SQL_INSERT_PATH="$PROJECT_ROOT_DIR/database/mysql/cafedebugdb/cafedebug-mysql-insert.sql"
 
-  # Execute insert script in MySQL
-  echo "Execute insert script in MySQL"
-  docker-compose exec -T cafedebugdb mysql -uroot -proot cafedebug-mysql-local -e "source /cafedebug-mysql-insert.sql"
+  # Execute the create and insert scripts
+  echo_info "Applying SQL create script..."
+  if [ -f "$SQL_CREATE_PATH" ]; then
+    cat "$SQL_CREATE_PATH" | run_mysql_stdin cafedebug-mysql-local
+    echo_ok "Create script applied successfully"
+  else
+    echo_error "Create script not found at $SQL_CREATE_PATH"
+    exit 1
+  fi
+
+  echo_info "Applying SQL insert script..."
+  if [ -f "$SQL_INSERT_PATH" ]; then
+    cat "$SQL_INSERT_PATH" | run_mysql_stdin cafedebug-mysql-local
+    echo_ok "Insert script applied successfully"
+  else
+    echo_error "Insert script not found at $SQL_INSERT_PATH"
+    exit 1
+  fi
   
   # Ensure Minio buckets exist (delegates to scripts/create-minio-buckets.sh)
-	echo "Ensuring Minio buckets..."
+	echo_info "Ensuring Minio buckets..."
 	DEFAULT_BUCKETS="cafedebug-uploads"
 	if [ -x "$PROJECT_ROOT_DIR/scripts/create-minio-buckets.sh" ]; then
 	  if [ -n "${MINIO_BUCKETS:-}" ]; then
@@ -104,5 +152,5 @@
 		"$PROJECT_ROOT_DIR/scripts/create-minio-buckets.sh" "$DEFAULT_BUCKETS"
 	  fi
 	else
-	  echo "Warning: create-minio-buckets.sh not found or not executable at $PROJECT_ROOT_DIR/scripts/; skipping bucket creation"
+	  echo_warning "Warning: create-minio-buckets.sh not found or not executable at $PROJECT_ROOT_DIR/scripts/; skipping bucket creation"
 	fi
