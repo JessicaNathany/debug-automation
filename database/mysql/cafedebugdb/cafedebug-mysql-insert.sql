@@ -1,50 +1,50 @@
 SET NAMES utf8mb4;
 SET CHARACTER SET utf8mb4;
 SET character_set_connection=utf8mb4;
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem,  CreatedBy, UpdatedBy) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdatedAt, CreatedAt, `Order`) 
     VALUES(
     '49e74cc2-f2ee-4d4a-b54b-10b27f28a600', 
     'Banner perfil', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/e50f2bcf-597f-4017-9cd4-1163edce4598banner-perfil.png', 
     null, 
     '2020-12-16 00:00:00', 
-    '2024-12-31 00:00:00', 1, NOW(), 1, null, null);
+    '2024-12-31 00:00:00', 1, NOW(), NOW(), 1);
 
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem, CreatedBy, UpdatedBy) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdatedAt, CreatedAt, `Order`) 
     VALUES(
     'a45914cd-883c-4be2-8de6-9e6a42ee02e5', 
     'Discord do Café Debug', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/23ff38aa-41c1-42c6-8dc1-e8391bf53d23banner-discord-new.jpg', 
     'https://discord.gg/hGpFPsV2gB', 
     '2021-08-28 00:00:00', 
-    '2024-12-31 00:00:00', 1, NOW(), 2, null, null);
+    '2024-12-31 00:00:00', 1, NOW(), NOW(), 2);
 
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem, CreatedBy, UpdatedBy) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdatedAt, CreatedAt, `Order`) 
     VALUES(
     '4bbbc8a6-cc59-4e48-9358-671b8eb0daab', 
     'Banner youtube Café Debug', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/4aba85c6-b200-485a-8bfa-eea3bb0347c1banneryoutube.jpg', 
     'https://www.youtube.com/c/Cafedebug', 
     '2020-12-16 00:00:00', 
-    '2024-12-31 00:00:00', 1, NOW(), 3, null, null);
+    '2024-12-31 00:00:00', 1, NOW(), NOW(), 3);
 
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem, CreatedBy, UpdatedBy) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdatedAt, CreatedAt, `Order`) 
     VALUES(
     'c6d56d61-b6bc-420d-969b-53a8ad84e22b', 
     'Mentoria Tech', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/mentoria-tech-banner.png', 
     'https://site-mentoria-tech-4ikwj7rzj-weslleyfratini.vercel.app/', 
     '2020-12-16 00:00:00', 
-    '2024-12-31 00:00:00', 1, NOW(), 4, null, null);
+    '2024-12-31 00:00:00', 1, NOW(), NOW(), 4);
 
-INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdateDate, Ordem, CreatedBy, UpdatedBy) 
+INSERT INTO Banner (Code, Name, UrlImage, Url, StartDate, EndDate, Active, UpdatedAt, CreatedAt, `Order`) 
 VALUES(
 '956fcefc-5fbd-4ec4-abe8-5a15029429b3', 
 'Banner AGO Filmes', 
 'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/2e760a0b-14fe-4429-8cf4-f46b99f966c6ago-filmes-banner.jpg', 
 'https://thiagocarvalhofotografia.wordpress.com', 
 '2022-06-09 09:00:00', 
-'2024-12-31 00:00:00', 1, NOW(), 5, null, null);
+'2024-12-31 00:00:00', 1, NOW(), NOW(), 5);
 
 INSERT INTO Category (Code, Name, CreatedBy, UpdatedBy) 
 VALUES('9873134f-c736-4e47-9f73-efcf162b431d', 'Linguagens de programação', null, null);

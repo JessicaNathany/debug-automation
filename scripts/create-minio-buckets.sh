@@ -1,11 +1,15 @@
 #!/bin/bash
 set -euo pipefail
 
+# Source functions for colored output and utilities
+SCRIPT_DIR="$(dirname "$0")"
+source "${SCRIPT_DIR}/functions.sh"
+
 PROJECT_ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 COMPOSE_FILES=("-f" "$PROJECT_ROOT_DIR/docker-compose.yml")
 
 # Start minio service (if not already)
-echo "Starting Minio (detached)..."
+echo_info "Starting Minio (detached)..."
 docker-compose "${COMPOSE_FILES[@]}" up -d minio
 
 # wait a bit for minio to be ready
@@ -27,14 +31,13 @@ fi
 MC_CMDS=("mc --insecure alias set myminio http://minio:9000 \${MINIO_ROOT_USER:-minioadmin} \${MINIO_ROOT_PASSWORD:-minioadmin}")
 for b in "${BUCKETS[@]}"; do
      # create the bucket only if it does not already exist (idempotent)
-     # use a short-circuit: try listing the bucket, otherwise create it
      MC_CMDS+=("mc --insecure ls myminio/${b} >/dev/null 2>&1 || mc --insecure mb myminio/${b}")
 done
 MC_CMDS+=("mc --insecure ls myminio")
 
 CMD=$(IFS=' && '; echo "${MC_CMDS[*]}")
 
-echo "Running minio-mc to create buckets: ${BUCKETS[*]}"
+echo_info "Running minio-mc to create buckets: ${BUCKETS[*]}"
 docker-compose "${COMPOSE_FILES[@]}" run --rm --entrypoint /bin/sh minio-mc -c "$CMD"
 
-echo "Buckets ensured. You can open Minio Console at http://localhost:9001 (user: minioadmin / pass: minioadmin)"
+echo_info "Buckets ensured. You can open Minio Console at http://localhost:9001 (user: minioadmin / pass: minioadmin)"
