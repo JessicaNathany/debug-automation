@@ -8,29 +8,10 @@ source "${SCRIPT_DIR}/functions.sh"
 # Define the root directory of the project (one level up from the script directory)
   PROJECT_ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 
-  # Default MySQL version
-  MySQL_VERSION="5.7"
-
-  # Check for MacOS and offer MySQL version choice
-  if [[ "$OSTYPE" == "darwin"* ]]; then
-      echo "You are using Mac."
-      read -p "Would you like to use MySQL 8.0? (Y/N) " -n 1 -r
-      echo   
-      if [[ $REPLY =~ ^[Yy]$ ]]; then
-          MySQL_VERSION="8.0"
-      fi
-  fi
-
-  echo_info "Using MySQL version $MySQL_VERSION"
-
-  # Use sed to replace the MySQL version in docker-compose.yml
-  if [[ "$OSTYPE" == "darwin"* ]]; then
-      # MacOS requires an empty extension with -i
-      sed -i '' "s/mysql:5.7/mysql:$MySQL_VERSION/" "$PROJECT_ROOT_DIR/docker-compose.yml"
-  else
-      # Linux
-      sed -i "s/mysql:5.7/mysql:$MySQL_VERSION/" "$PROJECT_ROOT_DIR/docker-compose.yml"
-  fi
+  # Read MySQL version from docker-compose.yml
+  MySQL_VERSION=$(grep -o 'mysql:[0-9]\+\.[0-9]\+' "$PROJECT_ROOT_DIR/docker-compose.yml" | cut -d':' -f2 || echo "8.0")
+  
+  echo_info "Using MySQL version $MySQL_VERSION from docker-compose.yml"
   
   ## Build list of compose files to use (root + optional api/ and svc/ fragments)
   COMPOSE_FILES=("-f" "$PROJECT_ROOT_DIR/docker-compose.yml")
@@ -59,19 +40,25 @@ source "${SCRIPT_DIR}/functions.sh"
   WAITED=0
   echo "Checking MySQL readiness..."
   
+  # Set MySQL auth based on docker-compose.yml environment
+  # Check if MYSQL_ROOT_PASSWORD is set in docker-compose.yml
+  if grep -q "MYSQL_ROOT_PASSWORD" "$PROJECT_ROOT_DIR/docker-compose.yml"; then
+    MYSQL_ROOT_PASSWORD=$(grep "MYSQL_ROOT_PASSWORD:" "$PROJECT_ROOT_DIR/docker-compose.yml" | sed 's/.*MYSQL_ROOT_PASSWORD:[[:space:]]*["'\'']*\([^"'\'']*\)["'\'']*$/\1/' | tr -d '"' | xargs)
+    MYSQL_AUTH="-uroot -p${MYSQL_ROOT_PASSWORD}"
+    echo_info "Found MySQL root password in docker-compose.yml"
+  else
+    MYSQL_AUTH="-uroot"
+    echo_info "No MySQL root password found, using passwordless auth"
+  fi
+  
   while true; do
-    # Check if we can actually connect and run a query (not just ping)
-    if docker-compose "${COMPOSE_FILES[@]}" exec -T cafedebugdb mysql -uroot -proot -e "SELECT 1" >/dev/null 2>&1; then
-      echo_ok "MySQL is ready with password authentication."
-      MYSQL_AUTH="-uroot -proot"
-      break
-    elif docker-compose "${COMPOSE_FILES[@]}" exec -T cafedebugdb mysql -uroot -e "SELECT 1" >/dev/null 2>&1; then
-      echo_ok "MySQL is ready with no-password authentication."
-      MYSQL_AUTH="-uroot"
+    # Test the MySQL connection with the detected authentication
+    if docker-compose "${COMPOSE_FILES[@]}" exec -T cafedebugdb mysql $MYSQL_AUTH -e "SELECT 1" >/dev/null 2>&1; then
+      echo_ok "MySQL is ready and accessible."
       break
     fi
     
-    # Also check if MySQL is still initializing by looking for the "ready for connections" message
+    # Check if MySQL is still initializing by looking for the "ready for connections" message
     if docker logs cafedebugdb 2>&1 | tail -10 | grep -q "ready for connections.*port: 3306"; then
       echo_info "MySQL reports ready, but connection test failed. Waiting a bit more..."
       sleep 5
@@ -84,6 +71,7 @@ source "${SCRIPT_DIR}/functions.sh"
     if [ "$WAITED" -ge "$MAX_WAIT" ]; then
       echo_error "Timed out waiting for MySQL to become ready. Logs:"
       docker logs cafedebugdb --tail=50
+      echo_error "Attempted MySQL auth: $MYSQL_AUTH"
       exit 1
     fi
   done
