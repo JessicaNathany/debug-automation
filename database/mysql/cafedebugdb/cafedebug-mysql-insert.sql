@@ -144,6 +144,6 @@ VALUES(
     'cafedebug', 
     'debugcafe@local.com', 
     'cf8676b53315b632ec681f2065d6e3c993c3ebaeb667338658b40983d7ce663e',
-    null, null, null, null);
+    NOW(), null, "admin", null);
 -- SHA 256 password cafedebug123
 
