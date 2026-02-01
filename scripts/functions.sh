@@ -1,6 +1,10 @@
 #!/bin/bash
 # Functions for colored output and utilities
 
+# Prevent multiple loading
+[ "${FUNCTIONS_LOADED:-}" = "1" ] && return 0
+readonly FUNCTIONS_LOADED=1
+
 ###### colors
 readonly COLOR_RED=$'\033[0;31m'
 readonly COLOR_GREEN=$'\033[0;32m'
