@@ -1,107 +1,96 @@
-Create table IF NOT EXISTS Banner 
+CREATE TABLE IF NOT EXISTS Banner 
 (
-    Id int auto_increment primary key,
-    Code char(36) not null,
-    Name varchar(50) not null,
-    UrlImage varchar(500) not null,
-    Url varchar(300) null,
-    StartDate datetime,
-    EndDate datetime,
-    Active bit,
-    UpdatedAt datetime null,
-    CreatedAt datetime null,
-    `Order` int null
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    UrlImage VARCHAR(500) NOT NULL,
+    Url VARCHAR(300) NULL,
+    StartDate DATETIME NULL,
+    EndDate DATETIME NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt DATETIME NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+    Active TINYINT(1) NOT NULL DEFAULT 1,
+    `Order` INT NULL
 );  
 
-Create table IF NOT EXISTS Category 
+CREATE TABLE IF NOT EXISTS Category 
 (
-    Id int auto_increment primary key,
-    Code char(36) not null,
-    Name varchar(50) not null,
-    CreatedBy varchar(50) null,
-    UpdatedBy varchar(50) null
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt DATETIME NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+    INDEX IDX_Category_Name (Name)
 );  
 
-Create table IF NOT EXISTS Contact 
+CREATE TABLE IF NOT EXISTS Contact 
 (
-    Id int auto_increment primary key,
-    Code char(36) not null,
-    Name varchar(50) not null,
-    CreatedBy varchar(50) null,
-    UpdatedBy varchar(50) null
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    Email VARCHAR(50) NULL,
+    Message VARCHAR(500) NOT NULL,
+    MessageDate DATETIME NOT NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt DATETIME NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 );  
 
 CREATE TABLE IF NOT EXISTS Episode (
     Id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Code CHAR(36) NOT NULL,
     Title VARCHAR(250) NOT NULL,
     Description MEDIUMTEXT NOT NULL,
-    ResumeDescription MEDIUMTEXT NOT NULL,
-    -- ShortDescription VARCHAR(500) NOT NULL, will be added in future migration
+    ShortDescription VARCHAR(500) NOT NULL,
     Url VARCHAR(2000) NOT NULL,
     ImageUrl VARCHAR(2000) NOT NULL,
-    PublicationDate DATETIME NOT NULL,
+    PublishedAt DATETIME NOT NULL,
     Tags JSON NULL,
-    -- PublishedAt DATETIME NOT NULL, will be added in future migration
     CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     UpdatedAt DATETIME NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-    Active BIT,
-    -- Active TINYINT(1) NOT NULL DEFAULT 1, will be added in future migration
+    Active TINYINT(1) NOT NULL DEFAULT 1, 
     Number INT NOT NULL DEFAULT 0,
     CategoryId INT NOT NULL,
     DurationInSeconds INT NULL DEFAULT 0,
-    -- Views INT NOT NULL DEFAULT 0, will be added in future migration
-    -- Likes INT NOT NULL DEFAULT 0, will be added in future migration
-    `View` INT,
-    `Like` INT,
+    `View` INT NOT NULL DEFAULT 0,
+    `Like` INT NOT NULL DEFAULT 0,
     CreatedBy VARCHAR(50) NULL,
     UpdatedBy VARCHAR(50) NULL,
     CONSTRAINT FK_Episodes_Category FOREIGN KEY (CategoryId) REFERENCES Category(Id) ON UPDATE CASCADE ON DELETE RESTRICT,
-    -- INDEX IDX_Episodes_PublishedAt (PublishedAt), will be added in future migration
-    INDEX IDX_Episodes_PublishedAt (PublicationDate),
+    INDEX IDX_Episodes_PublishedAt (PublishedAt),
     INDEX IDX_Episodes_Active (Active),
     INDEX IDX_Episodes_Category (CategoryId),
     INDEX IDX_Episodes_Title (Title(191))
 );
 
-Create table IF NOT EXISTS Team
+CREATE TABLE IF NOT EXISTS Team
 (
-    Id int auto_increment primary key,
-    Code char(36) not null,
-    Name varchar(50) not null,
-    UrlGitHub varchar(500) null,
-    UrlInstagram varchar(500) not null,
-    UrlLinkedin varchar(500) not null,
-    UrlImage varchar(500) not null,
-    Job varchar(300) null,
-    CreatedBy varchar(50) null,
-    UpdatedBy varchar(50) null
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    UrlGitHub VARCHAR(500) NULL,
+    UrlInstagram VARCHAR(500) NULL,
+    UrlLinkedin VARCHAR(500) NULL,
+    UrlImage VARCHAR(500) NOT NULL,
+    Job VARCHAR(300) NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt DATETIME NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ); 
 
-Create table IF NOT EXISTS UserAdmin
+CREATE TABLE IF NOT EXISTS UserAdmin
 (
-    Id int auto_increment primary key,
-    Code char(36) not null,
-    Name varchar(50) not null,
-    Email varchar(50) not null,
-    HashedPassword varchar(500) not null,
-    CreatedDate datetime null,
-    LastUpdate datetime null,
-    CreatedBy varchar(50) null,
-    UpdatedBy varchar(50) null
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    Email VARCHAR(50) NOT NULL,
+    HashedPassword VARCHAR(500) NOT NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt DATETIME NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ); 
 
-Create table IF NOT EXISTS RefreshTokens 
+CREATE TABLE IF NOT EXISTS RefreshTokens 
 (
-    Id int primary key AUTO_INCREMENT,
-    UserId int not null,
-    UserName varchar(50),
-    Token varchar(255),
-    ExpirationDate datetime,
-    CreatedDate datetime null,
-    LastUpdate datetime null,
-    foreign key (UserId) references UserAdmin(Id)
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    UserId INT NOT NULL,
+    UserName VARCHAR(50) NULL,
+    Token VARCHAR(255) NOT NULL,
+    ExpirationDate DATETIME NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt DATETIME NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (UserId) REFERENCES UserAdmin(Id)
 ); 
- 
 
 
