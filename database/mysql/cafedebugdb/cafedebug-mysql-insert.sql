@@ -180,14 +180,20 @@ VALUES(
     '2024-02-12 01:00:00', 1, 5, 5, 10, 10, 0, null, null);
 
 
-INSERT INTO Team (Name, UrlGitHub, UrlInstagram, UrlLinkedin, UrlImage, Job)
+INSERT INTO TeamMember (Name, Nickname, Email, Bio, PodcastRole, GithubUrl, InstagramUrl, LinkedInUrl, ProfilePhotoUrl, JobTitle, IsActive, JoinedAt)
 VALUES(
     'Jéssica Nathany',
+    'Jeh',
+    'jessica.nathany@cafedebug.com.br',
+    'Jéssica Nathany é uma desenvolvedora backend apaixonada por tecnologia e inovação. Com uma sólida experiência em desenvolvimento de software, ela é conhecida por sua habilidade em resolver problemas complexos e criar soluções eficientes. Além de seu trabalho como desenvolvedora, Jéssica é a host do podcast Café Debug, onde compartilha insights sobre o mundo da tecnologia, entrevistas com profissionais da área e discussões sobre as últimas tendências do setor. Ela é uma entusiasta da comunidade tech e está sempre disposta a aprender e compartilhar conhecimento com outros profissionais.',
+    'Host',
     'https://github.com/JessicaNathany', 
     'https://www.instagram.com/jnathanycarvalho/', 
     'https://www.linkedin.com/in/jessica-nathany-38260868/', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/eb3747ef-168f-408d-9156-06b36b79f3b5jessica.jpg', 
-    'Sofware Developer Backend, Host e fundadora do Café Debug');
+    'Sofware Developer Backend, Host e fundadora do Café Debug',
+    1,
+    '2017-02-12 01:00:00');
 
 -- Insert user admin
 INSERT INTO UserAdmin (Name, Email, HashedPassword) 
