@@ -18,12 +18,12 @@ To database configure in local environment, following this steps. Notes for each
 - Before running the project, configure access permission for this script. Enter the command in terminal (WSL, PowerShell, CMD, etc)
 
 ```bash
- chmod +x cafedebug-setup.sh
+ chmod +x run.sh
 ```
 - Select the project for which you want to run the script to configure the database.
 
 ```bash
- ./cafedebug-setup.sh
+ ./run.sh -up
 ```
 
 
