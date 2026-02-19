@@ -6,3 +6,4 @@
 .env
 /data/
 /svc/minio/data/
+WARP.md
