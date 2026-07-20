@@ -4651,20 +4651,17 @@ VALUES(
           '2026-04-16 01:00:00', '["real digital", "Marcelo Queiroz"]', 'published', 200, 32, 30, 14, '2026-04-16 01:00:00', null);
 
 -- Team ---
-INSERT INTO TeamMember (Name, Nickname, Email, Bio, PodcastRole, GithubUrl, InstagramUrl, LinkedInUrl, ProfilePhotoUrl, JobTitle, IsActive, JoinedAt, CreatedAt, UpdatedAt)
+INSERT INTO TeamMember (Name, Email, Bio, PodcastRole, GithubUrl, LinkedInUrl, ProfilePhotoUrl, JobTitle, IsActive, CreatedAt, UpdatedAt)
 VALUES(
     'Jéssica Nathany',
-    null,
-    null,
+    'test@test.com',
     'Desenvolvedora de sistemas, host e fundadora do Café Debug',
     'Host',
     'https://github.com/JessicaNathany', 
-    null, 
     'https://www.linkedin.com/in/jessica-nathany-38260868/', 
     'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/eb3747ef-168f-408d-9156-06b36b79f3b5jessica.jpg', 
     'Sofware Developer Backend',
     1,
-    '2024-01-01 00:00:00',
     '2024-01-01 00:00:00',
     '2024-01-01 00:00:00');
 
