@@ -4650,6 +4650,331 @@ VALUES(
           'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/finops-updated.jpg',
           '2026-04-16 01:00:00', '["real digital", "Marcelo Queiroz"]', 'published', 200, 32, 30, 14, '2026-04-16 01:00:00', null);
 
+INSERT INTO Episode (Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Tags, Status, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy)
+VALUES(
+          '#188 Papel Manager SRE team por Marcelo Pinheiro',
+          '<p> </p>
+          <p>Neste episódio, conversamos com Marcelo Pinheiro, manager de um time global de SRE, que já atuou em empresas ao redor do mundo e compartilha sua visão sobre carreira, liderança e o mercado internacional de tecnologia. Conversamos sobre os desafios da carreira de manager, impacto da cultura organizacional e o que realmente muda quando você é responsável por pessoas e não entregas.<br /><br /></p>
+          <p><strong>🧩 </strong><strong>Assuntos abordados</strong><strong>:</strong></p>
+          <p><strong>Introdução do convidado</strong></p>
+          <ul>
+          <li>O papel de um manager em times de SRE</li>
+          <li>Diferença entre liderança técnica e liderança de pessoas</li>
+          <li>Transição de desenvolvedor para manager</li>
+          <li>Gestão de times globais (diferenças de cultura)</li>
+          <li>Mercado de tecnologia atual (soft skills e hard skills)</li>
+          <li>Carreira internacional (dicas para quem pretende buscar uma vaga fora do Brasil)</li>
+          <li>O trabalho da comunidade Os Programadores e as entrevistas no podcast e o impacto positivo no Brasil</li>
+          </ul>
+          <p><strong>🔗</strong><strong>Links úteis</strong></p>
+          <ul>
+          <li>💬 Nosso Discord:<a href="https://discord.com/invite/hGpFPsV2gB"> https://discord.com/invite/hGpFPsV2gB</a></li>
+          <li>☕ Café Debug Global no Spotify:<a href="https://open.spotify.com/show/3S1OK2ecjZj7zoaZ34bFkP?si=ae09a6a1796a4587"> Ouça aqui</a></li>
+          <li>📖 Livro <strong>Carreira Dev</strong> - Hábitos para evoluir no desenvolvimento do software além do código <a href="https://www.casadocodigo.com.br/products/livro-carreira-dev">Link</a></li>
+          <li>🌐 Podcast Os Programadores: <a href="https://open.spotify.com/show/0IrqGbURcNnumdHVkfKIFA">Link</a> </li>
+          <li>🌐 Blog Os Programadores: <a href="https://osprogramadores.com/faq/">Link</a> </li>
+          </ul>
+          <p><strong>👥 </strong><strong>Participantes</strong></p>
+          <ul>
+          <li>Jéssica Nathany – Software Developer e Host <a href="https://jessicanathany.github.io/">Github.io</a></li>
+          <li>Marcelo Pinheiro –  Manager Global SRE Team na Liferay <a href="https://www.linkedin.com/in/mpinheir/">Link</a></li>
+          </ul>
+          <p>🎧 <strong>Edição:</strong> Thiago Carvalho<br /><a href="https://www.linkedin.com/in/thi-agocarvalho/"> LinkedIn</a></p>
+          <p>📬 Dúvidas, sugestões ou publicidade<br />Mande um e-mail para: <strong>debugcafe@gmail.com</strong></p>',
+          'Neste episódio, conversamos com Marcelo Pinheiro, manager de um time global de SRE, que já atuou em empresas ao redor do mundo e compartilha sua visão sobre carreira, liderança e o mercado internacional de tecnologia. Conversamos sobre os desafios da carreira de manager, impacto da cultura organizacional e o que realmente muda quando você é responsável por pessoas e não entregas.',
+          'https://omny.fm/shows/caf-debug-seu-podcast-de-tecnologia/188-papel-manager-sre-team-por-marcelo-pinheiro',
+          'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/finops-updated.jpg',
+          '2026-04-27 01:00:00', '["carreira", "SRE Manager"]', 'published', 201, 4, 231, 109, '2026-04-27 01:00:00', null);
+
+INSERT INTO Episode (Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Tags, Status, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy)
+VALUES(
+          '#189 Dev no setor financeiro: senioridade, decisões técnicas e carreira',
+          '<p>O mercado financeiro é um dos ambientes mais desafiadores para desenvolvedores de software. Sistemas precisam lidar com alta escala, baixa latência, segurança rigorosa e, principalmente, com o impacto direto de cada decisão técnica no negócio. Neste programa, conversamos com a Nádia Oliveira sobre sua experiência como desenvolvedora nesse contexto.</p>
+            <p><strong>🧩 </strong><strong>Assuntos abordados</strong><strong>:</strong></p>
+            <p><strong>Introdução a convidada</strong></p>
+            <ul>
+            <li>Trajetória da Nádia no mercado financeiro</li>
+            <li>Como é o dia a dia de um desenvolvedor nesse setor</li>
+            <li>Diferença entre trabalhar no mercado financeiro vs outras áreas</li>
+            <li>Sistemas críticos: o que muda na prática</li>
+            <li>Observabilidade e monitoramento em sistemas financeiros</li>
+            <li>Soft skills e hard skills que devs precisam ter para trabalhar nesse setor</li>
+            <li>Dicas e sugestões</li>
+            </ul>
+            <p><strong>🔗</strong><strong>Links úteis</strong></p>
+            <ul>
+            <li>💬 Nosso Discord:<a href="https://discord.com/invite/hGpFPsV2gB"> https://discord.com/invite/hGpFPsV2gB</a></li>
+            <li>☕ Mais episódios:<a href="https://omny.fm/shows/cafe-de-bug"> Ouça aqui</a></li>
+            <li>📖 Livro <strong>Carreira Dev</strong> - Hábitos para evoluir no desenvolvimento do software além do código <a href="https://www.casadocodigo.com.br/products/livro-carreira-dev">Link</a></li>
+            </ul>
+            <p><strong>👥 </strong><strong>Participantes</strong></p>
+            <ul>
+            <li>Jéssica Nathany – Software Developer e Host <a href="https://jessicanathany.github.io/">Github.io</a></li>
+            <li>Nádia Oliveira Moretti –  Senior Software Engineer at Banco Pan <a href="https://www.linkedin.com/in/n%C3%A1dia-oliveira-moretti-7a245337/">Link</a></li>
+            <li>Weslley Fratini –  Software Developer Fullstack <a href="https://www.linkedin.com/in/weslley-fratini/">Link</a></li>
+            </ul>
+            <p>🎧 <strong>Edição:</strong> Thiago Carvalho<br /><a href="https://www.linkedin.com/in/thi-agocarvalho/"> LinkedIn</a></p>
+            <p>📬 Dúvidas, sugestões ou publicidade<br />Mande um e-mail para: <strong>debugcafe@gmail.com</strong></p>',
+            'O mercado financeiro é um dos ambientes mais desafiadores para desenvolvedores de software. Sistemas precisam lidar com alta escala, baixa latência, segurança rigorosa e, principalmente, com o impacto direto de cada decisão técnica no negócio. Neste programa, conversamos com a Nádia Oliveira sobre sua experiência como desenvolvedora nesse contexto.',
+            'https://omny.fm/shows/caf-debug-seu-podcast-de-tecnologia/189-dev-no-setor-financeiro-senioridade-decis-es-t-cnicas-e-carreira',
+            'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/mercado-financeiro.jpg',
+            '2026-05-04 01:00:00', '["dev setor financeiro", "carreira"]', 'published', 202, 4, 1, 1, '2026-05-04 01:00:00', null);
+
+INSERT INTO Episode (Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Tags, Status, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy)
+VALUES(
+          '#190 Engenharia de cibersegurança em antifraude',
+          '<p>Conversamos com a Cilene Dantas sobre engenharia de cibersegurança aplicada à antifraude, explorando como sistemas são projetados para identificar comportamentos suspeitos, reduzir riscos e proteger usuários e empresas. Falamos sobre os desafios de trabalhar em sistemas críticos, análise de risco e detecção de padrões, impacto de falso positivo e decisões técnicas.</p>
+            <p><strong>🧩 </strong><strong>Assuntos abordados</strong><strong>:</strong></p>
+            <p><strong>Introdução à convidada</strong></p>
+            <ul>
+            <li>Introdução ao tema</li>
+            <li>Trajetória na área de segurança e antifraude</li>
+            <li>Diferença entre segurança tradicional e antifraude</li>
+            <li>Como reduzir riscos e proteger usuários e empresas</li>
+            <li>O que a engenharia antifraude realmente envolve</li>
+            <li>Identidade e autenticação (MFA, Biometria, Device fingerprinting, e etc)</li>
+            <li>Tipos de fraude (pagamentos cartão/pix, contas falsas e ataques)</li>
+            </ul>
+            <p><strong>🔗</strong><strong>Links úteis</strong></p>
+            <ul>
+            <li>💬 Nosso Discord:<a href="https://discord.com/invite/hGpFPsV2gB"> https://discord.com/invite/hGpFPsV2gB</a></li>
+            <li>☕ Escute outros episódios:<a href="https://omny.fm/shows/cafe-de-bug">Ouça aqui</a></li>
+            <li>📖 Livro <strong>Carreira Dev</strong> - Hábitos para evoluir no desenvolvimento do software além do código <a href="https://www.casadocodigo.com.br/products/livro-carreira-dev">Link</a></li>
+            <li>🌐 Guide Stripes payments &amp; fraud guides: <a href="https://osprogramadores.com/faq/">Link</a> </li>
+            <li>🌐 café  em código: <a href="https://www.linkedin.com/company/caf%C3%A9-em-c%C3%B3digo-engenharia-carreira-lideran%C3%A7a-tech/">Link</a> </li>
+            <li></li>
+            </ul>
+            <p><strong>👥 </strong><strong>Participantes</strong></p>
+            <ul>
+            <li>Jéssica Nathany – Software Developer e Host <a href="https://jessicanathany.github.io/">Github.io</a></li>
+            <li>Weslley Fratini –  Software Developer Fullstack <a href="https://www.linkedin.com/in/weslley-fratini/">Link</a></li>
+            <li>Cilene Danta –  Tech Manager em Segurança Digital na Webmotors <a href="https://www.linkedin.com/in/cilenedanta/">Link</a></li>
+            </ul>
+            <p>🎧 <strong>Edição:</strong> Thiago Carvalho<br /><a href="https://www.linkedin.com/in/thi-agocarvalho/"> LinkedIn</a></p>
+            <p>📬 Dúvidas, sugestões ou publicidade<br />Mande um e-mail para: <strong>debugcafe@gmail.com</strong></p>',
+            'Conversamos com a Cilene Dantas sobre engenharia de cibersegurança aplicada à antifraude, explorando como sistemas são projetados para identificar comportamentos suspeitos, reduzir riscos e proteger usuários e empresas. Falamos sobre os desafios de trabalhar em sistemas críticos, análise de risco e detecção de padrões, impacto de falso positivo e decisões técnicas.',
+            'https://omny.fm/shows/caf-debug-seu-podcast-de-tecnologia/190-engenharia-de-ciberseguran-a-em-antifraude',
+            'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/anti-fraudjpg.jpg',
+            '2026-05-19 01:00:00', '["cybersecurity", "anti fraude"]', 'published', 203, 7, 1, 1, '2026-05-19 01:00:00', null);
+
+INSERT INTO Episode (Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Tags, Status, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy)
+VALUES(
+          '#191 De DBA para Account Manager - Amanda Portela',
+          '<p>Transição de carreira é um dos momentos mais desafiadores na vida de quem trabalha com tecnologia. Sair de uma atuação profundamente técnica para um papel mais estratégico, próximo do negócio e do cliente, exige muito mais do que conhecimento técnico. Exige mudança de mentalidade. Neste programa, conversamos com a Amanda Portela, que construiu a carreira como DBRE e, após longos anos na área técnica, fez a transição para Technical Account Manager.</p>
+            <p><strong><br />🧩 </strong><strong>Assuntos abordados</strong><strong>:</strong></p>
+            <ul>
+            <li>Introdução à convidada</li>
+            <li>Experiências e vivências com a infra</li>
+            <li>Trajetória da Amanda como DBRE (Database Reliability Engineer)</li>
+            <li>O que faz um Technical Account Manager</li>
+            <li>Diferença entre TAM, Solutions Architect, e Customer Engineer</li>
+            <li>Diferença entre carreira técnica e papéis voltados ao cliente</li>
+            <li>Como foi o processo de transição (desafios, inseguranças, aprendizados)</li>
+            <li>O que muda no dia a dia: de resolver problemas técnicos para resolver problemas de negócio</li>
+            <li>Soft skills essenciais para transição</li>
+            <li>Certificações e estudos</li>
+            <li>Erros e aprendizados</li>
+            </ul>
+            <p><strong>🔗</strong><strong>Links úteis</strong></p>
+            <ul>
+            <li>💬 Nosso Discord:<a href="https://discord.com/invite/hGpFPsV2gB"> https://discord.com/invite/hGpFPsV2gB</a></li>
+            <li>☕ Mais episódios:<a href="https://omny.fm/shows/cafe-de-bug"> Ouça aqui</a></li>
+            <li>📖 Livro <strong>Carreira Dev</strong> - Hábitos para evoluir no desenvolvimento do software além do código <a href="https://www.casadocodigo.com.br/products/livro-carreira-dev">Link</a></li>
+            <li>🌐 Curso Oratória : <a href="https://www.instagram.com/escoladeartesdejundiai?igsh=dnNpdmp4OWMydm4z">Link</a> </li>
+            </ul>
+            <p><strong>👥 </strong><strong>Participantes</strong></p>
+            <ul>
+            <li>Jéssica Nathany – Software Developer e Host <a href="https://jessicanathany.github.io/">Github.io</a></li>
+            <li>Amanda Portela –  Technical Account Manager no Google <a href="https://www.linkedin.com/in/amandanportela/">Link</a></li>
+            <li>Weslley Fratini –  Software Developer Fullstack <a href="https://www.linkedin.com/in/weslley-fratini/">Link</a></li>
+            </ul>
+            <p>🎧 <strong>Edição:</strong> Thiago Carvalho<br /><a href="https://www.linkedin.com/in/thi-agocarvalho/"> LinkedIn</a></p>
+            <p>📬 Dúvidas, sugestões ou publicidade<br />Mande um e-mail para: <strong>debugcafe@gmail.com</strong></p>',
+            'Transição de carreira é um dos momentos mais desafiadores na vida de quem trabalha com tecnologia. Sair de uma atuação profundamente técnica para um papel mais estratégico, próximo do negócio e do cliente, exige muito mais do que conhecimento técnico. Exige mudança de mentalidade. Neste programa, conversamos com a Amanda Portela, que construiu a carreira como DBRE e, após longos anos na área técnica, fez a transição para Technical Account Manager.',
+            'https://omny.fm/shows/caf-debug-seu-podcast-de-tecnologia/191-de-dba-para-account-manager-amanda-portela',
+            'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/transicao-careira.jpg',
+            '2026-05-25 01:00:00', '["carreira", "DBA", "account manager"]', 'published', 204, 4, 1, 1, '2026-05-25 01:00:00', null);
+
+INSERT INTO Episode (Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Tags, Status, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy)
+VALUES(
+          '#192 Open source na era da IA: Desafios e Sustentabilidade',
+          '<p>Open source é um dos pilares da tecnologia moderna, mas, por trás de cada projeto existe um trabalho contínuo de manutenção, revisão e construção da comunidade. Com o avanço da inteligência artificial, esse cenário está mudando rapidamente. Conforme o crescimento de contribuições, levantaram-se novas questões sobre qualidade e trazendo desafios inéditos para mantenedores. A Camila Maia participou dessa discussão com a gente.</p>
+            <p><br /><strong>🧩 </strong><strong>Assuntos abordados</strong><strong>:</strong></p>
+            <p><strong>Introdução à convidada</strong></p>
+            <ul>
+            <li>Um pouco sobre a Cumbuca Dev e como está tornando open source mais acessível</li>
+            <li>A importância em contribuir com projetos open source</li>
+            <li>Como a inteligência artificial está mudando a forma de contribuir</li>
+            <li>Aumento no volume de contribuições geradas por IA</li>
+            <li>Qualidade vs quantidade de PRs</li>
+            <li>Como é manter um projeto open source na prática</li>
+            <li>Sobrecarga e desafios de manter projetos ativos</li>
+            <li>Desafios atuais do open source</li>
+            <li>Sustentabilidade no open source: como manter projetos vivos, modelos de financiamento, reconhecimento vs trabalho invisível e como incentivar contribuições de qualidade</li>
+            </ul>
+            <p><strong>🔗</strong><strong>Links úteis</strong></p>
+            <ul>
+            <li>💬 Nosso Discord:<a href="https://discord.com/invite/hGpFPsV2gB"> https://discord.com/invite/hGpFPsV2gB</a></li>
+            <li>☕ Mais episódios:<a href="https://omny.fm/shows/cafe-de-bug"> Ouça aqui</a></li>
+            <li>📖 Livro <strong>Carreira Dev</strong> - Hábitos para evoluir no desenvolvimento do software além do código <a href="https://www.casadocodigo.com.br/products/livro-carreira-dev">Link</a></li>
+            <li>🌐 Open source guide: <a href="https://github.com/github/opensource.guide">Link</a> </li>
+            <li>🌐 Mantenedores: <a href="https://docs.github.com/pt/discussions/collaborating-with-your-community-using-discussions/collaborating-with-maintainers-using-discussions">Link</a> </li>
+            <li>🌐 Cumbuca Dev: <a href="https://cumbuca.dev/">Link</a> </li>
+            <li>🌐 open-source list AI contribution policies: <a href="https://github.com/melissawm/open-source-ai-contribution-policies">Link</a>    </li>
+            <li>🌐 Youtube Cumbuca Dev: <a href="https://www.youtube.com/@CumbucaDev">Link</a></li>
+            <li>🌐 GitHub para humanos Cumbuca Dev: <a href="http://git-e-github.para-humanos.cumbuca.dev/">Link</a></li>
+            <li>🌐 Linuxtips - treinamento GitHub essentials: <a href="https://linuxtips.io/treinamento/github-essentials/">Link</a></li>
+            <li>🌐 Discord Cumbuca Dev: <a href="https://cumbuca.dev/discord">Link</a></li>
+            <li>🌐 NOSS Cumbuca Dev: <a href="https://noss.cumbuca.dev">Link</a></li>
+            <li>🌐 Playlist Vida de Mantenedora: <a href="https://www.youtube.com/playlist?list=PLfC4KiYEEWO7OZ8ZLnwZ28c8n_BqV5R8g">Link</a></li>
+            <li>🌐 GitHub Camila Maia: <a href="https://github.com/camilamaia">Link</a></li>
+            <li>🌐 Codespace: <a href="https://github.com/features/codespaces">Link</a></li>
+            </ul>
+            <p><strong>👥 </strong><strong>Participantes</strong></p>
+            <ul>
+            <li>Jéssica Nathany – Software Developer e Host <a href="https://jessicanathany.github.io/">Github.io</a></li>
+            <li>Camila Maia –  Developer Experience Specialist e Co-Founder Cumbuca Dev:<a href="https://www.linkedin.com/in/cmaiacd/">Link</a></li>
+            </ul>
+            <p><br />🎧 <strong>Edição:</strong> Thiago Carvalho<br /><a href="https://www.linkedin.com/in/thi-agocarvalho/"> LinkedIn</a></p>
+            <p>📬 Dúvidas, sugestões ou publicidade<br />Mande um e-mail para: <a href="mailto:debugcafe@gmail.com"><strong>debugcafe@gmail.com</strong></a></p>',
+            'Open source é um dos pilares da tecnologia moderna, mas, por trás de cada projeto existe um trabalho contínuo de manutenção, revisão e construção da comunidade. Com o avanço da inteligência artificial, esse cenário está mudando rapidamente. Conforme o crescimento de contribuições, levantaram-se novas questões sobre qualidade e trazendo desafios inéditos para mantenedores. A Camila Maia participou dessa discussão com a gente.',
+            'https://omny.fm/shows/caf-debug-seu-podcast-de-tecnologia/192-open-source-na-era-da-ia-desafios-e-sustentabilidade',
+            'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/open-source-ia.jpg',
+            '2026-06-08 01:00:00', '["open source", "IA"]', 'published', 205, 21, 1, 1, '2026-06-08 01:00:00', null);
+
+INSERT INTO Episode (Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Tags, Status, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy)
+VALUES(
+          '#193 Arquitetura e Design Sistemas Embarcados',
+          '<p>Arquitetura de software não se limita a sistemas web ou distribuídos. Em sistemas embarcados, as decisões de design envolvem restrições muito mais rígidas, como limitação de hardware, consumo de energia, tempo real e confiabilidade. Neste episódio, conversamos com Rodrigo Schardong sobre como funcionam a arquitetura e o design de sistemas embarcados na prática. </p>
+            <p><br /><strong>🧩 </strong><strong>Assuntos abordados</strong><strong>:</strong></p>
+            <p><strong>Introdução ao convidado</strong></p>
+            <ul>
+            <li>O que são sistemas embarcados e onde estão presentes</li>
+            <li>Diferença entre desenvolvimento tradicional e sistemas embarcados</li>
+            <li>Como funciona a arquitetura de sistemas embarcados</li>
+            <li>Restrições de hardware (memória, processamento, energia)</li>
+            <li>Design orientado a tempo real (real-time systems)</li>
+            <li>Bare-metal / Super-loop: loop infinito com polling. Simples, previsível, sem overhead de SO</li>
+            <li>RTOS (Real-Time Operating System): FreeRTOS, Zephyr, ThreadX. Tasks, filas, semáforos. Boa escolha quando há múltiplas responsabilidades concorrentes.</li>
+            <li>Como dispositivos se comunicam (I2C, SPI, UART)</li>
+            <li>O que é firmware e como é desenvolvido</li>
+            <li>Anúncios, dicas e contatos</li>
+            </ul>
+            <p><strong>🔗</strong><strong>Links úteis</strong></p>
+            <ul>
+            <li>💬 Nosso Discord:<a href="https://discord.com/invite/hGpFPsV2gB"> https://discord.com/invite/hGpFPsV2gB</a></li>
+            <li>☕ Mais episódios:<a href="https://omny.fm/shows/cafe-de-bug"> Ouça aqui</a></li>
+            <li>📖 Livro <strong>Carreira Dev</strong> - Hábitos para evoluir no desenvolvimento do software além do código <a href="https://www.casadocodigo.com.br/products/livro-carreira-dev">Link</a></li>
+            <li>🌐 Seu IoT <a href="https://seuiot.com.br/">Link</a> </li>
+            <li>🌐 Arquitetura de Software em sistemas embarcados <a href="https://embarcados.com.br/arquitetura-de-software-em-sistemas-embarcados/">Link</a> </li>
+            </ul>
+            <p><strong>👥 </strong><strong>Participantes</strong></p>
+            <ul>
+            <li>Jéssica Nathany – Software Developer e Host <a href="https://jessicanathany.github.io/">Github.io</a></li>
+            <li>Rodrigo Schardong –  Firmware Engineer e fundador Engenharia do Futuro: <a href="https://www.linkedin.com/in/rodrigoschardong/">Link</a></li>
+            </ul>
+            <p><br />🎧 <strong>Edição:</strong> Thiago Carvalho<br /><a href="https://www.linkedin.com/in/thi-agocarvalho/"> LinkedIn</a></p>
+            <p>📬 Dúvidas, sugestões ou publicidade<br />Mande um e-mail para: <a href="mailto:debugcafe@gmail.com"><strong>debugcafe@gmail.com</strong></a></p>',
+            'Arquitetura de software não se limita a sistemas web ou distribuídos. Em sistemas embarcados, as decisões de design envolvem restrições muito mais rígidas, como limitação de hardware, consumo de energia, tempo real e confiabilidade. Neste episódio, conversamos com Rodrigo Schardong sobre como funcionam a arquitetura e o design de sistemas embarcados na prática.',
+            'https://omny.fm/shows/caf-debug-seu-podcast-de-tecnologia/193-arquitetura-e-design-sistemas-embarcados',
+            'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/embarcados.jpg',
+            '2026-06-22 01:00:00', '["arquitetura de software", "sistemas embarcados"]', 'published', 206, 16, 1, 1, '2026-06-22 01:00:00', null);
+
+INSERT INTO Episode (Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Tags, Status, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy)
+VALUES(
+          '#194 Entrevista técnica e como se preparar (Live Code e System Design)',
+          '<p>Hoje em dia, é bem comum nos processos seletivos técnicos as empresas adotarem etapas como live coding e system design para avaliar candidatos. Mais do que testar conhecimento, essas etapas buscam entender como o desenvolvedor pensa, resolve problemas e se comunica. Neste episódio, reunimos diferentes experiências para discutir como funcionam essas entrevistas na prática e como se preparar de forma estratégica. </p>
+            <p><br /><strong>🧩 </strong><strong>Assuntos abordados</strong><strong>:</strong></p>
+            <p><strong>Introdução aos convidados</strong></p>
+            <ul>
+            <li>Como funcionam entrevistas técnicas hoje (live code e system design) </li>
+            <li>O que as empresas realmente avaliam nessas etapas </li>
+            <li>Diferença entre saber programar e performar em entrevista </li>
+            <li>Live Code: (o que é esperado, como pensar em voz alta, estratégias, erros comuns, e como se preparar)</li>
+            <li>Plataformas para praticar: Leetcode, Hackerrank e Neetcode.io</li>
+            <li>System Design: (o que é system design nas entrevistas, como estruturar respostas, como evoluir na entrevista e erros comuns)</li>
+            <li>Esses testes realmente medem bons desenvolvedores? </li>
+            <li>Diferença entre entrevistas de startups vs big techs </li>
+            <li>Pressão e ansiedade durante entrevistas </li>
+            </ul>
+            <p><strong>🔗</strong><strong>Links úteis</strong></p>
+            <ul>
+            <li>💬 Nosso Discord:<a href="https://discord.com/invite/hGpFPsV2gB"> https://discord.com/invite/hGpFPsV2gB</a></li>
+            <li>☕ Mais episódios:<a href="https://omny.fm/shows/cafe-de-bug"> Ouça aqui</a></li>
+            <li>📖 Livro <strong>Carreira Dev</strong> - Hábitos para evoluir no desenvolvimento do software além do código <a href="https://www.casadocodigo.com.br/products/livro-carreira-dev">Link</a></li>
+            <li>🌐 Discord Craft &amp; Code Club <a href="https://abacatinhos.github.io/">Link</a> </li>
+            <li>🌐 Site AguiarDev <a href="https://tiagoaguiardev.com.br">Link</a> </li>
+            <li>🌐 Blog Nelson Nobre <a href="https://nelsonbn.com/blog/">Link</a> </li>
+            <li>🌐 Canal YouTube para estudar principais casos de LeetCode:<a href="https://www.youtube.com/@GregHogg">Link</a> </li>
+            <li>🌐 Jogo  para estudar System Design - System Design Police Department: <a href="https://sdpd.live/">Link</a> </li>
+            <li>🌐 Grupo de Mocs no WhatsApp: <a href="https://chat.whatsapp.com/FKiu8W2JAJl1mPRazJismU">Link</a></li>
+            <li></li>
+            <li>🌐 Blog do Lucas: <a href="https://www.olucasandrade.com/">Link</a> </li>
+            </ul>
+            <p><strong>👥 </strong><strong>Participantes</strong></p>
+            <ul>
+            <li>Jéssica Nathany – Senior Software Developer e Host <a href="https://jessicanathany.github.io/">Github.io</a></li>
+            <li>Tiago Aguiar –  Microsoft MVP e Desenvolvedor Sênior .NET na Olist : <a href="https://tiagoaguiardev.com.br/">Link</a></li>
+            <li>Nelson Nobre –  Microsoft MVP e Software Architect .NET na VFX Financial: <a href="https://nelsonbn.com/">Link</a></li>
+            <li>Lucas Andrade –  Senior Software Engineer na Percona: <a href="https://www.linkedin.com/in/lucasandradesouza/">Link</a></li>
+            </ul>
+            <p><br />🎧 <strong>Edição:</strong> Thiago Carvalho<br /><a href="https://www.linkedin.com/in/thi-agocarvalho/"> LinkedIn</a></p>
+            <p>📬 Dúvidas, sugestões ou publicidade<br />Mande um e-mail para: <a href="mailto:debugcafe@gmail.com"><strong>debugcafe@gmail.com</strong></a></p>',
+            'Hoje em dia, é bem comum nos processos seletivos técnicos as empresas adotarem etapas como live coding e system design para avaliar candidatos. Mais do que testar conhecimento, essas etapas buscam entender como o desenvolvedor pensa, resolve problemas e se comunica. Neste episódio, reunimos diferentes experiências para discutir como funcionam essas entrevistas na prática e como se preparar de forma estratégica.',
+            'https://omny.fm/shows/caf-debug-seu-podcast-de-tecnologia/194-entrevista-t-cnica-e-como-se-preparar-live-code-e-system-design',
+            'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/entrevista-tecnica.jpg',
+            '2026-07-13 01:00:00', '["carreira", "entrevistas técnicas"]', 'published', 207, 4, 1, 1, '2026-07-13 01:00:00', null);
+
+
+INSERT INTO Episode (Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Tags, Status, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy)
+VALUES(
+          '#195 O papel estratégico do DevRel no ecossistema tech',
+          '<p>Você sabe o que é DevRel? Muito além de eventos, palestras e redes sociais, Developer Relations é uma área estratégica que conecta empresas e desenvolvedores, criando comunidades, compartilhando e influenciando ecossistemas inteiros. Neste programa, Morganna Giovanelli explica como funciona DevRel na prática e compartilha da sua experiência com nossos ouvintes.</p>
+            <p><br /><strong>🧩 </strong><strong>Assuntos abordados</strong><strong>:</strong></p>
+            <p><strong>Introdução às convidadas</strong></p>
+            <ul>
+            <li>O que é DevRel na prática</li>
+            <li>Diferença entre DevRel, Marketing e Engenharia</li>
+            <li>Como é o dia a dia de quem trabalha como DevRel</li>
+            <li>O papel de comunidades na carreira de desenvolvedores</li>
+            <li>Criação de conteúdo técnico (artigos, talks e vídeos)</li>
+            <li>Advocacy: representar o desenvolvedor dentro da empresa</li>
+            <li>Habilidades: soft skills e hard skills</li>
+            <li>Importância do crescimento técnico</li>
+            </ul>
+            <p><strong>🔗</strong><strong>Links úteis</strong></p>
+            <ul>
+            <li>💬 Nosso Discord:<a href="https://discord.com/invite/hGpFPsV2gB"> https://discord.com/invite/hGpFPsV2gB</a></li>
+            <li>☕ Mais episódios:<a href="https://omny.fm/shows/cafe-de-bug"> Ouça aqui</a></li>
+            <li>📖 Livro <strong>Carreira Dev</strong> - Hábitos para evoluir no desenvolvimento do software além do código <a href="https://www.casadocodigo.com.br/products/livro-carreira-dev">Link</a></li>
+            <li>🌐 Abacatinhos.dev <a href="https://abacatinhos.github.io/">Link</a> </li>
+            <li>🌐 Livro DevRel <a href="https://www.casadocodigo.com.br/products/livro-devrel">Link</a> </li>
+            <li>🌐 Instagram Morgana <a href="https://www.instagram.com/morgannadev/">Link</a> </li>
+            </ul>
+            <p><strong>👥 </strong><strong>Participantes</strong></p>
+            <ul>
+            <li>Jéssica Nathany – Senior Software Developer e Host <a href="https://jessicanathany.github.io/">Github.io</a></li>
+            <li>Morganna Giovanelli – Developer Relations e Embaixadora da LinuxTips e CodeCon: <a href="https://www.linkedin.com/in/morgannadev/">Link</a></li>
+            <li>Patricia Parra (Pachi) – Relationship and Community Manager na Sharp: <a href="https://www.linkedin.com/in/pachicodes/">Link</a></li>
+            </ul>
+            <p><br />🎧 <strong>Edição:</strong> Thiago Carvalho<br /><a href="https://www.linkedin.com/in/thi-agocarvalho/"> LinkedIn</a></p>
+            <p>📬 Dúvidas, sugestões ou publicidade<br />Mande um e-mail para: <a href="mailto:debugcafe@gmail.com"><strong>debugcafe@gmail.com</strong></a></p>',
+            'Você sabe o que é DevRel? Muito além de eventos, palestras e redes sociais, Developer Relations é uma área estratégica que conecta empresas e desenvolvedores, criando comunidades, compartilhando e influenciando ecossistemas inteiros. Neste programa, Morganna Giovanelli explica como funciona DevRel na prática e compartilha da sua experiência com nossos ouvintes.',
+            'https://omny.fm/shows/caf-debug-seu-podcast-de-tecnologia/195-o-papel-estrat-gico-do-devrel-no-ecossistema-tech',
+            'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/devrel.jpg',
+            '2026-07-27 01:00:00', '["carreira", "devrel"]', 'published', 208, 4, 1, 1, '2026-07-27 01:00:00', null);
+
+INSERT INTO Episode (Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Tags, Status, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy)
+VALUES(
+          '#196 Carreira pública para devs: Desafios e oportunidades com Fernanda Macêdo',
+          'atualizar...',
+            'Conversamos com a Cilene Dantas sobre engenharia de cibersegurança aplicada à antifraude, explorando como sistemas são projetados para identificar comportamentos suspeitos, reduzir riscos e proteger usuários e empresas. Falamos sobre os desafios de trabalhar em sistemas críticos, análise de risco e detecção de padrões, impacto de falso positivo e decisões técnicas.',
+            'atualizar..',
+            'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/dev-concursos.jpg',
+            '2026-07-03 01:00:00', '["carreira", "desenvolvimento de software setor público"]', 'published', 209, 4, 1, 1, '2026-05-19 01:00:00', null);
+
+
+
 -- Team ---
 INSERT INTO TeamMember (Name, Email, Bio, PodcastRole, GithubUrl, LinkedInUrl, ProfilePhotoUrl, JobTitle, IsActive, CreatedAt, UpdatedAt)
 VALUES(
