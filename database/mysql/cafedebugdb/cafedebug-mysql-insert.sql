@@ -4967,11 +4967,82 @@ VALUES(
 INSERT INTO Episode (Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Tags, Status, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy)
 VALUES(
           '#196 Carreira pública para devs: Desafios e oportunidades com Fernanda Macêdo',
-          'atualizar...',
-            'Conversamos com a Cilene Dantas sobre engenharia de cibersegurança aplicada à antifraude, explorando como sistemas são projetados para identificar comportamentos suspeitos, reduzir riscos e proteger usuários e empresas. Falamos sobre os desafios de trabalhar em sistemas críticos, análise de risco e detecção de padrões, impacto de falso positivo e decisões técnicas.',
-            'atualizar..',
+          '<p>Você já pensou em seguir a carreira pública como desenvolvedor(a) de software? Embora muitas pessoas associem o setor público a algo burocrático e estável, a realidade é que existem grandes sistemas, desafios técnicos e oportunidades interessantes para quem quer atuar como dev. Conversamos com a Fernanda Macêdo, que tirou todas essas dúvidas e compartilhou sua experiência.</p>
+            <p><br /><strong>🧩 </strong><strong>Assuntos abordados</strong><strong>:</strong></p>
+            <ul>
+            <li>Introdução à convidada</li>
+            <li>Como é ser desenvolvedora de software no Banco do Brasil</li>
+            <li>Como funciona a carreira pública para devs</li>
+            <li>Diferença entre concurso público e contratação CLT</li>
+            <li>Projetos, sistemas desenvolvidos, desafios no setor público</li>
+            <li>Sistemas críticos e de grande escala (bancos, governo, serviços digitais)</li>
+            <li>Tecnologias (legado e modernas), tomadas de decisão e burocracia</li>
+            <li>Como se preparar para prestar concursos públicos no setor de tecnologia</li>
+            <li>Prova técnica e processos</li>
+            <li>Encerramento</li>
+            </ul>
+            <p><strong>🔗</strong><strong>Links úteis</strong></p>
+            <ul>
+            <li>💬 Nosso Discord:<a href="https://discord.com/invite/hGpFPsV2gB"> https://discord.com/invite/hGpFPsV2gB</a></li>
+            <li>☕ Mais episódios:<a href="https://omny.fm/shows/cafe-de-bug"> Ouça aqui</a></li>
+            <li>📖 Livro <strong>Carreira Dev</strong> - Hábitos para evoluir no desenvolvimento do software além do código <a href="https://www.casadocodigo.com.br/products/livro-carreira-dev">Link</a></li>
+            <li>🌐 Instagram Fernanda Macêdo <a href="http://instagram.com/devconcursada?igsh=MXd6NDN6ejYzd2FjZQ==">Link</a> </li>
+            <li>🌐 Canal da Fernanda Youtube: <a href="https://www.youtube.com/@FernandaDevConcursada">Link</a> </li>
+            <li>🌐 PCI Concurso  <a href="https://www.pciconcursos.com.br/">Link</a> </li>
+            <li>🌐 Concurso DataPrev  <a href="https://www.pciconcursos.com.br/vagas/desenvolvimento-de-software">Link</a>  </li>
+            </ul>
+            <p><strong>👥 </strong><strong>Participantes</strong></p>
+            <ul>
+            <li>Jéssica Nathany – Senior Software Developer e Host <a href="https://jessicanathany.github.io/">Github.io</a></li>
+            <li>Fernanda Macêdo –  Software Engineer no Banco do Brasil: <a href="https://www.linkedin.com/in/fernandamacedodev/">Link</a></li>
+            </ul>
+            <p><br />🎧 <strong>Edição:</strong> Thiago Carvalho<br /><a href="https://www.linkedin.com/in/thi-agocarvalho/"> LinkedIn</a></p>
+            <p>📬 Dúvidas, sugestões ou publicidade<br />Mande um e-mail para: <a href="mailto:debugcafe@gmail.com"><strong>debugcafe@gmail.com</strong></a></p>',
+            'Você já pensou em seguir a carreira pública como desenvolvedor(a) de software? Embora muitas pessoas associem o setor público a algo burocrático e estável, a realidade é que existem grandes sistemas, desafios técnicos e oportunidades interessantes para quem quer atuar como dev. Conversamos com a Fernanda Macêdo, que tirou todas essas dúvidas e compartilhou sua experiência',
+            'https://omny.fm/shows/caf-debug-seu-podcast-de-tecnologia/196-carreira-p-blica-para-devs-desafios-e-oportunidades-com-fernanda-mac-do',
             'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/dev-concursos.jpg',
             '2026-07-03 01:00:00', '["carreira", "desenvolvimento de software setor público"]', 'published', 209, 4, 1, 1, '2026-05-19 01:00:00', null);
+
+
+INSERT INTO Episode (Title, Description, ShortDescription, Url, ImageUrl, PublishedAt, Tags, Status, `Number`, CategoryId, `View`, `Like`, CreatedBy, UpdatedBy)
+VALUES(
+          '#197 Produto além das features: O que todo dev precisa entender com Erika Oliveira',
+          '<p>Você já percebeu como o termo “produto” tem aparecido cada vez mais no dia a dia de quem trabalha com tecnologia? Neste episódio, conversamos com Erika Oliveira, Staff Product Manager e professora na FIAP, sobre os bastidores do mundo de produto, os desafios reais da área e como a troca em comunidade pode transformar a forma como você enxerga tecnologia, negócio e carreira</p>
+            <p><strong>🧩 </strong><strong>Assuntos abordados</strong><strong>:</strong></p>
+            <p><strong>Introdução à convidada</strong></p>
+            <ul>
+            <li>Introdução à convidada (trajetória, atuação em produto e envolvimento com comunidade) </li>
+            <li>Evolução do papel de Product Manager</li>
+            <li>Diferença entre Product Owner e Product Manager</li>
+            <li>Produto como resolução de problema (não só feature)</li>
+            <li>Como produto se conecta com engenharia</li>
+            <li>Como priorizar quando tudo é urgente</li>
+            <li>OKR, Roadmap e Discovery contínuo</li>
+            <li>Relação com stakeholders</li>
+            <li>Comunidades e o impacto na carreira (sobre o Agile Brazil)</li>
+            <li>O papel das comunidades na evolução profissional</li>
+            <li>Como a comunidade contribui para o aprendizado contínuo </li>
+            <li>Dicas para quem quer migrar ou crescer na área de produto</li>
+            </ul>
+            <p><strong>🔗</strong><strong>Links úteis</strong></p>
+            <ul>
+            <li>💬 Nosso Discord:<a href="https://discord.com/invite/hGpFPsV2gB"> https://discord.com/invite/hGpFPsV2gB</a></li>
+            <li>☕ Mais episódios:<a href="https://omny.fm/shows/cafe-de-bug"> Ouça aqui</a></li>
+            <li>📖 Livro <strong>Carreira Dev</strong> - Hábitos para evoluir no desenvolvimento do software além do código <a href="https://www.casadocodigo.com.br/products/livro-carreira-dev">Link</a></li>
+            <li>🌐 Comunidade Agile Brazil  <a href="https://www.agilebrazil.com/2026/">Link</a></li>
+            <li>🌐 Link promocional para ouvintes do <strong>Café Debug</strong> Agile Brazil - Foz do Iguaçu  <a href="https://www.even3.com.br/agilebrazil2026-746128?cp=CafeDebug">Link</a> </li>
+            </ul>
+            <p><strong>👥 </strong><strong>Participantes</strong></p>
+            <ul>
+            <li>Jéssica Nathany – Senior Software Developer e Host <a href="https://jessicanathany.github.io/">Github.io</a></li>
+            <li>Erika Oliveira –  Staff Product Manager e Professora na FIAP: <a href="https://www.linkedin.com/in/oliveira-erika/">Link</a></li>
+            </ul>
+            <p><br />🎧 <strong>Edição:</strong> Thiago Carvalho<br /><a href="https://www.linkedin.com/in/thi-agocarvalho/"> LinkedIn</a></p>
+            <p>📬 Dúvidas, sugestões ou publicidade<br />Mande um e-mail para: <a href="mailto:debugcafe@gmail.com"><strong>debugcafe@gmail.com</strong></a></p>',
+            'Você já percebeu como o termo “produto” tem aparecido cada vez mais no dia a dia de quem trabalha com tecnologia? Neste episódio, conversamos com Erika Oliveira, Staff Product Manager e professora na FIAP, sobre os bastidores do mundo de produto, os desafios reais da área e como a troca em comunidade pode transformar a forma como você enxerga tecnologia, negócio e carreira',
+            'https://omny.fm/shows/caf-debug-seu-podcast-de-tecnologia/197-produto-al-m-das-features-o-que-todo-dev-precisa-entender-com-erika-oliveira',
+            'https://cafedebug-uploads.s3.us-east-2.amazonaws.com/papo-produto.jpg',
+            '2026-08-27 01:00:00', '["carreira", "product owner", "negócio"]', 'published', 210, 4, 1, 1, '2026-05-19 01:00:00', null);
 
 
 
